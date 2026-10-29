@@ -146,7 +146,7 @@ export const products = [
 export const profile = {
   email: "",
   linkedin: "",
-  trailhead: "",
+  trailhead: "https://www.salesforce.com/trailblazer/maharaja25",
   resume: "",
   tracker: "",
   domain: "",
