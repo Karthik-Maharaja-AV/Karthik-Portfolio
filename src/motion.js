@@ -190,6 +190,7 @@ function setup() {
         y = gsap.quickTo(preview, "y", { duration: 0.35 });
       document.querySelectorAll(".work-select").forEach((el) => {
         on(el, "pointerenter", () => {
+          gsap.killTweensOf(preview);
           preview.querySelector("strong").textContent =
             el.querySelector("strong").textContent;
           preview.querySelector("small").textContent =

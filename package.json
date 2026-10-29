@@ -1,1 +1,17 @@
-{"name":"karthik-portfolio","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"vite --host 0.0.0.0","build":"vite build","preview":"vite preview --host 0.0.0.0"},"dependencies":{"gsap":"3.13.0","lenis":"1.3.11","three":"0.180.0","vite":"6.4.5"}}
+{
+  "name": "karthik-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "gsap": "3.13.0",
+    "lenis": "1.3.11",
+    "three": "0.180.0",
+    "vite": "6.4.5"
+  }
+}

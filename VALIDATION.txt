@@ -1,0 +1,35 @@
+Validation — 29 October 2026
+
+Six implementation phases, each built and committed:
+1. cfca039 — clear developer role, externalized data, impact/approach TODOs, shorter notes and contact placeholders.
+2. aef0553 — minimum text sizes, contrast calculations, visible focus and compact mobile hero.
+3. a1e4c37 — consolidated CSS, Google Fonts links, favicon/social metadata and deferred 3D.
+4. 70c5481 — original procedural cloud, curved record-card path, invoice rows/total, rupee stamp, stock, camera modes and static SVG fallback.
+5. 423f667 — pinned GSAP/Lenis, greeting curtain, masked headings, magnetic controls, work previews, scroll transitions and reduced-motion cleanup.
+6. a516845 — Netlify headers/config, form, OG PNG, 404/confirmation pages, sitemap and robots.
+Follow-up maintenance commits format the source, update Vite within version 6, and correct interaction details.
+
+Build output (decimal KB; gzip in parentheses)
+Before: one JavaScript bundle 520.04 KB (133.76 KB).
+After: entry 15.84 KB (6.08 KB); lazy motion 135.98 KB (51.37 KB); lazy 3D 512.65 KB (131.32 KB).
+Total JavaScript if every enhancement loads: 664.47 KB (188.77 KB).
+The initial bundle is smaller; total bytes increased because GSAP and Lenis were added. Three.js remains above Vite's 500 KB advisory threshold. It is deferred and not downloaded in reduced-motion mode.
+Main CSS 17.38 KB (4.60 KB), Lenis CSS 0.38 KB (0.21 KB).
+
+Lighthouse mobile: Performance 100 / Accessibility 100 / SEO 100.
+Lighthouse 12.8.2, default simulated mobile throttling, local Chrome headless against production dist served on 127.0.0.1:5176 with Netlify-equivalent CSP/cache/security headers and gzip compression. Full HTML and JSON reports are supplied alongside this project. These are local lab measurements, not measurements of a deployed Netlify domain.
+Reported FCP/LCP 0.9s, total blocking time 20ms, speed index 2.7s. Later navigation/hover fixes do not change the rendering approach.
+
+Checks
+- npm run build passes on Vite 6.4.5.
+- npm audit --omit=dev: zero reported vulnerabilities.
+- 375px, 768px, 1440px layouts: no horizontal document overflow. At 375x812, #work begins around y=902px (about 1.11 screens).
+- Tablet hero caption clears the footer; checked desktop and mobile screenshots.
+- Overview / Changes / Approach, keyboard next-case activation, preserved focus, product module selection and hero mode/module controls work.
+- Local contact form validates required input and displays the deployment-required message without transmitting the test message.
+- Production browser console has no errors under the CSP. Vite dev case/product interactions match dist and show no console errors.
+- Reduced-motion and simulated WebGL failure controller tests preserve SVG, mode toggles and descriptions; reduced-motion makes no 3D import. These fallback checks used a DOM stub, not an operating-system preference change.
+- Text-size scan found no visible text below 12px. Calculated representative text contrast ratios range from 5.39:1 to 12.33:1; Lighthouse accessibility is 100.
+
+Remaining work that needs your information or deployment
+Six impact statements, six approach step lists, email, LinkedIn, Trailhead, tracker URL, real resume.pdf and final domain. Replace the visible TODOs before publishing. Production Netlify form delivery, DNS/HTTPS and social crawler previews need verification after deployment. 60fps on a specific mid-range laptop has not been benchmarked; viewport pause, visibility pause and pixel-ratio cap are implemented.

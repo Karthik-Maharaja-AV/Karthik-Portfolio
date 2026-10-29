@@ -114,6 +114,7 @@ for (const [key, label] of Object.entries({
 // Lightweight navigation state remains available without animation libraries.
 let queued = false;
 const progress = () => {
+  if (scrollY < 200) document.querySelectorAll("nav .links a").forEach(a => a.classList.remove("is-current"));
   const max = document.documentElement.scrollHeight - innerHeight;
   document.querySelector(".scroll-progress").style.transform =
     `scaleX(${max > 0 ? scrollY / max : 0})`;
