@@ -10,11 +10,13 @@ import {
   SphereGeometry,
   BoxGeometry,
   CylinderGeometry,
+  CapsuleGeometry,
   PlaneGeometry,
   Shape,
   ExtrudeGeometry,
   CatmullRomCurve3,
   Vector3,
+  Box3,
   BufferGeometry,
   Line,
   LineBasicMaterial,
@@ -44,7 +46,7 @@ export function createStory(canvas, state) {
   const mat = (color) =>
     new MeshStandardMaterial({ color, roughness: 0.92, metalness: 0 });
   const paper = mat("#f4eddb"),
-    clay = mat("#b1c1ae"),
+    sky = mat("#0a8fd4"),
     ink = mat("#344b3f"),
     muted = mat("#8b9c83"),
     accent = mat("#c6512d"),
@@ -80,17 +82,26 @@ export function createStory(canvas, state) {
   const cloud = new Group();
   cloud.position.set(-0.35, 1.85, -0.25);
   root.add(cloud);
+  // Classic cloud: tallest puff in the middle, smaller puffs to each side,
+  // all resting on one flat line so it never reads as a crescent.
+  const cloudBase = -0.42;
   [
-    [-0.7, 0, 0.47],
-    [-0.24, 0.22, 0.65],
-    [0.35, 0.05, 0.53],
-    [0.75, -0.12, 0.35],
-  ].forEach(([x, y, r]) => {
-    const m = new Mesh(new SphereGeometry(r, 24, 16), clay);
-    m.position.set(x, y, 0);
-    m.scale.z = 0.7;
+    [-0.95, 0.3],
+    [-0.55, 0.42],
+    [-0.05, 0.6],
+    [0.5, 0.47],
+    [0.92, 0.32],
+  ].forEach(([x, r]) => {
+    const m = new Mesh(new SphereGeometry(r, 32, 20), sky);
+    m.position.set(x, cloudBase + r, 0);
+    m.scale.z = 0.75;
     cloud.add(m);
   });
+  const belly = new Mesh(new CapsuleGeometry(0.3, 1.9, 8, 24), sky);
+  belly.rotation.z = Math.PI / 2;
+  belly.position.y = cloudBase + 0.3;
+  belly.scale.z = 0.75;
+  cloud.add(belly);
   const invoice = new Group();
   invoice.position.set(0, -1.25, 0.3);
   invoice.rotation.x = -0.95;
@@ -192,6 +203,73 @@ export function createStory(canvas, state) {
   root.traverse((o) => {
     if (o.isMesh) o.material = o.material.clone();
   });
+  // Framing samples: the disc rim plus the bounds of everything standing on it.
+  const fitPoints = [];
+  for (let i = 0; i < 32; i++) {
+    const a = (i / 32) * Math.PI * 2;
+    for (const y of [-1.69, -1.61])
+      fitPoints.push(new Vector3(Math.cos(a) * 2.25, y, Math.sin(a) * 2.25));
+  }
+  base.visible = false;
+  const bounds = new Box3().setFromObject(root);
+  base.visible = true;
+  bounds.max.y += 0.15; // room for the selected cloud lift
+  for (const x of [bounds.min.x, bounds.max.x])
+    for (const y of [bounds.min.y, bounds.max.y])
+      for (const z of [bounds.min.z, bounds.max.z])
+        fitPoints.push(new Vector3(x, y, z));
+  const projected = new Vector3(),
+    views = {
+      salesforce: {
+        dir: new Vector3(4.6, 3.1, 7.6).normalize(),
+        position: new Vector3(4.6, 3.4, 7.6),
+        look: new Vector3(0, 0.3, 0),
+      },
+      avs: {
+        dir: new Vector3(4.1, 3.15, 7.1).normalize(),
+        position: new Vector3(4.1, 2.8, 7.1),
+        look: new Vector3(0, -0.35, 0),
+      },
+    };
+  // Find the closest camera distance (and vertical aim) that keeps every sample inside the frame.
+  function fitView(view) {
+    const saved = camera.position.clone(),
+      margin = 0.96,
+      lookAt = new Vector3(0, 0.5, 0);
+    let lo, hi;
+    const extents = (d) => {
+      camera.position.copy(lookAt).addScaledVector(view.dir, d);
+      camera.lookAt(lookAt);
+      camera.updateMatrixWorld();
+      let minY = Infinity,
+        maxY = -Infinity,
+        maxX = 0;
+      for (const p of fitPoints) {
+        projected.copy(p).applyAxisAngle(root.up, yaw).project(camera);
+        maxX = Math.max(maxX, Math.abs(projected.x));
+        minY = Math.min(minY, projected.y);
+        maxY = Math.max(maxY, projected.y);
+      }
+      return { maxX, minY, maxY };
+    };
+    for (let pass = 0; pass < 3; pass++) {
+      lo = 3;
+      hi = 40;
+      for (let i = 0; i < 24; i++) {
+        const mid = (lo + hi) / 2,
+          e = extents(mid);
+        const half = Math.max(e.maxX, (e.maxY - e.minY) / 2);
+        if (half > margin) lo = mid;
+        else hi = mid;
+      }
+      const e = extents(hi),
+        offset = (e.maxY + e.minY) / 2;
+      lookAt.y += offset * hi * Math.tan((camera.fov * Math.PI) / 360);
+    }
+    view.look = lookAt;
+    view.position = lookAt.clone().addScaledVector(view.dir, hi);
+    camera.position.copy(saved);
+  }
   let lastSelection = "";
   function highlight() {
     const id = state.mode + state.selected;
@@ -270,9 +348,9 @@ export function createStory(canvas, state) {
       b.scale.setScalar(Math.max(0.001, ease((t - 3 - i * 0.6) / 0.6) * reset));
     });
     const focus = state.mode === "avs" ? 1 : state.scroll * 0.9;
-    target.set(4.6 - focus * 0.5, 3.4 - focus * 0.6, 7.6 - focus * 0.5);
+    target.lerpVectors(views.salesforce.position, views.avs.position, focus);
     camera.position.lerp(target, 0.07);
-    look.set(0, 0.3 - focus * 0.65, 0);
+    look.lerpVectors(views.salesforce.look, views.avs.look, focus);
     camera.lookAt(look);
     root.rotation.y += (yaw + px * 0.08 - root.rotation.y) * 0.07;
     root.rotation.x += (pitch + py * 0.035 - root.rotation.x) * 0.07;
@@ -309,6 +387,8 @@ export function createStory(canvas, state) {
     renderer.setSize(rect.width, rect.height, false);
     camera.aspect = rect.width / rect.height;
     camera.updateProjectionMatrix();
+    fitView(views.salesforce);
+    fitView(views.avs);
   }
   new ResizeObserver(resize).observe(canvas);
   new IntersectionObserver((e) => {

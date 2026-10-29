@@ -9,8 +9,14 @@ export const cases = [
     tags: ["Apex", "Trigger logic", "Test classes"],
     contribution:
       "Reviewed an existing calculation path, removed superseded components, and expanded tests around the remaining implementation.",
-    impact: "TODO: Add a verified concrete outcome for this contribution.",
-    approach: ["TODO: Add sanitized implementation steps for this case."],
+    impact:
+      "One calculation path to maintain instead of overlapping components, with broader tests protecting the revised behavior.",
+    approach: [
+      "Traced the existing calculation path and the components that fed it.",
+      "Identified superseded components and removed them.",
+      "Updated the remaining automation for the revised behavior.",
+      "Extended test classes to cover the changed scenarios.",
+    ],
   },
   {
     category: "apex",
@@ -22,8 +28,14 @@ export const cases = [
     tags: ["Forecasting", "Quote logic", "Regression fixes"],
     contribution:
       "Updated forecast behavior for closed-lost opportunities, contributed changes to forecasting helpers, and addressed quote-date recalculation requirements.",
-    impact: "TODO: Add a verified concrete outcome for this contribution.",
-    approach: ["TODO: Add sanitized implementation steps for this case."],
+    impact:
+      "Forecasts stay consistent when deals are lost or quote-line dates move, without manual recalculation.",
+    approach: [
+      "Reviewed how forecast values were derived from opportunities and quote lines.",
+      "Updated forecast handling for closed-lost opportunities.",
+      "Contributed changes to shared forecasting helpers and migration support.",
+      "Added recalculation when quote-line dates change and checked for regressions.",
+    ],
   },
   {
     category: "experience",
@@ -35,8 +47,14 @@ export const cases = [
     tags: ["Screen Flow", "Lightning pages", "Quick actions"],
     contribution:
       "Added screen-flow metadata alongside an opportunity page update, a quick action, and supporting permission configuration. Later contributions addressed eligible-partner selection.",
-    impact: "TODO: Add a verified concrete outcome for this contribution.",
-    approach: ["TODO: Add sanitized implementation steps for this case."],
+    impact:
+      "Users pick eligible partners through a guided flow on the opportunity, instead of navigating related records by hand.",
+    approach: [
+      "Designed a screen flow for navigating opportunity partners.",
+      "Exposed it through a quick action on the opportunity Lightning page.",
+      "Added the permission configuration users need to run it.",
+      "Refined the flow to limit selection to eligible partners.",
+    ],
   },
   {
     category: "security",
@@ -48,8 +66,14 @@ export const cases = [
     tags: ["Permission sets", "API-only access", "Permission groups"],
     contribution:
       "Contributed configuration for API-only integration access and targeted permissions for integration and business-user scenarios.",
-    impact: "TODO: Add a verified concrete outcome for this contribution.",
-    approach: ["TODO: Add sanitized implementation steps for this case."],
+    impact:
+      "Integrations run with API-only access, and business users get the object access their work needs.",
+    approach: [
+      "Reviewed what the integration user and business users actually needed.",
+      "Configured API-only permission groups for integration access.",
+      "Updated permission sets with targeted object access.",
+      "Kept integration and business-user permissions separate.",
+    ],
   },
   {
     category: "experience",
@@ -61,8 +85,14 @@ export const cases = [
     tags: ["Approval groups", "Metadata", "Runbooks"],
     contribution:
       "Updated approval-group configuration, removed retired feature flags, and documented automation changes in runbooks.",
-    impact: "TODO: Add a verified concrete outcome for this contribution.",
-    approach: ["TODO: Add sanitized implementation steps for this case."],
+    impact:
+      "Fewer retired flags and outdated settings in the org, with automation changes documented for the next release.",
+    approach: [
+      "Updated approval-group configuration to match current approvers.",
+      "Removed feature flags that had been retired.",
+      "Adjusted interface configuration in metadata.",
+      "Documented the automation changes in release runbooks.",
+    ],
   },
   {
     category: "data",
@@ -74,8 +104,14 @@ export const cases = [
     tags: ["dbt", "Field mappings", "Sales data"],
     contribution:
       "Added sales-data fields and corrected missing mappings in a downstream data project. Also contributed a CRM Analytics dashboard link in Salesforce.",
-    impact: "TODO: Add a verified concrete outcome for this contribution.",
-    approach: ["TODO: Add sanitized implementation steps for this case."],
+    impact:
+      "New Salesforce sales fields reach downstream reporting, and previously missing mappings are filled in.",
+    approach: [
+      "Identified sales fields that downstream reporting needed.",
+      "Added the fields to the Salesforce-aligned data models.",
+      "Corrected missing mappings in the downstream data project.",
+      "Linked a CRM Analytics dashboard from Salesforce.",
+    ],
   },
 ];
 export const products = [
@@ -144,10 +180,10 @@ export const products = [
   },
 ];
 export const profile = {
-  email: "",
-  linkedin: "",
+  email: "avkm2002@gmail.com",
+  linkedin: "https://www.linkedin.com/in/karthik-maharaja-av-508622145/",
   trailhead: "https://www.salesforce.com/trailblazer/maharaja25",
   resume: "",
-  tracker: "",
+  tracker: "https://github.com/Karthik-Maharaja-AV/salesforce-learning",
   domain: "",
-}; // TODO: Supply these values before publishing.
+}; // TODO: Supply resume and domain before publishing.

@@ -14,7 +14,7 @@
       data-fonts
       media="print"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap"
     />
     <link rel="stylesheet" href="/src/styles.css" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -43,6 +43,7 @@
       name="twitter:image"
       content="https://YOUR-DOMAIN.example/og-image.png"
     />
+    <script src="/theme.js"></script>
     <script type="module" src="/src/fonts.js"></script>
   </head>
   <body>
@@ -53,10 +54,17 @@
         <path d="M0 0 H100 V0 Q50 40 0 0 Z" />
       </svg>
     </div>
-    <div class="work-preview" hidden aria-hidden="true">
-      <span>SALESFORCE / SELECTED WORK</span><strong></strong><small></small>
+    <div class="page-transition" hidden aria-hidden="true">
+      <svg class="pt-top" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0 100 Q50 0 100 100 Z" />
+      </svg>
+      <span class="pt-label"></span>
+      <svg class="pt-bottom" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0 0 Q50 0 100 0 Z" />
+      </svg>
     </div>
     <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="spotlight" aria-hidden="true"></div>
     <div class="wrap">
       <nav>
         <a href="#" class="brand" aria-label="Karthik home"
@@ -64,7 +72,39 @@
         >
         <div class="links">
           <a href="#work">Salesforce</a><a href="#avs">avs-corp</a
-          ><a href="#about">About</a><a href="#contact">Contact</a>
+          ><a href="#about">About</a><a href="#contact">Contact</a
+          ><button
+            type="button"
+            class="theme-toggle"
+            aria-label="Switch to dark theme"
+          >
+            <svg
+              class="sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+              />
+            </svg>
+            <svg
+              class="moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+            </svg>
+          </button>
         </div>
       </nav>
       <main id="main">
@@ -137,6 +177,108 @@
             <div>
               <span class="eyebrow">01 / INSIDE THE WORK</span>
               <h2>Pick a problem.<br />See what changed.</h2>
+              <svg class="squiggle" viewBox="0 0 300 20" aria-hidden="true">
+                <path
+                  d="M2 12 C30 2 50 20 80 10 S130 2 160 12 S220 20 250 8 S290 6 298 10"
+                />
+              </svg>
+            </div>
+            <div class="work-art" aria-hidden="true">
+              <svg class="constellation" viewBox="0 0 380 230">
+                <path
+                  class="cloud-outline"
+                  d="M70 190 C28 190 22 128 70 122 C66 80 116 60 146 86 C162 42 228 38 248 84 C280 62 326 84 318 124 C360 128 356 190 312 190 Z"
+                />
+                <g class="links">
+                  <path d="M108 150 L160 112" />
+                  <path d="M160 112 L214 98" />
+                  <path d="M214 98 L268 130" />
+                  <path d="M268 130 L236 164" />
+                  <path d="M236 164 L166 166" />
+                  <path d="M166 166 L108 150" />
+                  <path d="M160 112 L166 166" />
+                  <path d="M214 98 L236 164" />
+                </g>
+                <g transform="translate(108 150)">
+                  <g class="node" data-case="0">
+                    <circle class="halo" r="15" />
+                    <circle r="6.5" />
+                    <text y="-14">Apex</text>
+                  </g>
+                </g>
+                <g transform="translate(160 112)">
+                  <g class="node" data-case="1">
+                    <circle class="halo" r="15" />
+                    <circle r="6.5" />
+                    <text y="-14">CRM</text>
+                  </g>
+                </g>
+                <g transform="translate(214 98)">
+                  <g class="node" data-case="2">
+                    <circle class="halo" r="15" />
+                    <circle r="6.5" />
+                    <text y="-14">Flow</text>
+                  </g>
+                </g>
+                <g transform="translate(268 130)">
+                  <g class="node" data-case="3">
+                    <circle class="halo" r="15" />
+                    <circle r="6.5" />
+                    <text y="-14">Access</text>
+                  </g>
+                </g>
+                <g transform="translate(236 164)">
+                  <g class="node" data-case="4">
+                    <circle class="halo" r="15" />
+                    <circle r="6.5" />
+                    <text y="24">Release</text>
+                  </g>
+                </g>
+                <g transform="translate(166 166)">
+                  <g class="node" data-case="5">
+                    <circle class="halo" r="15" />
+                    <circle r="6.5" />
+                    <text y="24">Data</text>
+                  </g>
+                </g>
+                <g transform="translate(300 40)">
+                  <g class="cirrus">
+                    <g class="cirrus-float">
+                      <path
+                        class="cirrus-body"
+                        d="M8 36 C-5 36 -5 18 8 17 C8 5 23 1 29 10 C34 -1 52 2 51 15 C62 15 63 36 51 36 Z"
+                      />
+                      <g class="cirrus-eyes">
+                        <circle cx="21" cy="23" r="2.3" />
+                        <circle cx="36" cy="23" r="2.3" />
+                      </g>
+                      <path class="cirrus-smile" d="M25 29 Q28.5 32 32 29" />
+                      <circle class="blush" cx="15" cy="28" r="2.6" />
+                      <circle class="blush" cx="42" cy="28" r="2.6" />
+                      <path class="cirrus-arm" d="M55 25 Q63 21 64 12" />
+                    </g>
+                  </g>
+                </g>
+                <g transform="translate(46 98)">
+                  <path
+                    class="sparkle"
+                    d="M0 -7 L1.8 -1.8 L7 0 L1.8 1.8 L0 7 L-1.8 1.8 L-7 0 L-1.8 -1.8 Z"
+                  />
+                </g>
+                <g transform="translate(286 206)">
+                  <path
+                    class="sparkle"
+                    d="M0 -5 L1.3 -1.3 L5 0 L1.3 1.3 L0 5 L-1.3 1.3 L-5 0 L-1.3 -1.3 Z"
+                  />
+                </g>
+                <g transform="translate(120 46)">
+                  <path
+                    class="sparkle"
+                    d="M0 -5 L1.3 -1.3 L5 0 L1.3 1.3 L0 5 L-1.3 1.3 L-5 0 L-1.3 -1.3 Z"
+                  />
+                </g>
+              </svg>
+              <span class="doodle-note">hover a case, watch it light up ↓</span>
             </div>
             <p>
               Salesforce contributions across business logic, guided workflows,
@@ -151,9 +293,61 @@
               aria-label="Choose a Salesforce contribution"
               id="work-list"
             ></div>
-            <div class="detail" id="work-detail" aria-live="polite"></div>
+            <div class="detail-wrap">
+              <div class="bot-peek" aria-hidden="true">
+                <svg class="bolt-bot" viewBox="0 0 92 62">
+                  <path class="bot-line" d="M46 18 V24" />
+                  <path
+                    class="bot-bolt"
+                    d="M47 0 L40 11 H46 L42 20 L53 7 H47 L51 0 Z"
+                  />
+                  <path
+                    class="bot-head"
+                    d="M16 62 V38 Q16 22 32 22 H60 Q76 22 76 38 V62 Z"
+                  />
+                  <rect
+                    class="bot-screen"
+                    x="24"
+                    y="30"
+                    width="44"
+                    height="24"
+                    rx="9"
+                  />
+                  <circle class="bot-eye" cx="38" cy="42" r="6" />
+                  <circle class="bot-eye" cx="54" cy="42" r="6" />
+                  <circle class="pupil" cx="38" cy="42" r="2.6" />
+                  <circle class="pupil" cx="54" cy="42" r="2.6" />
+                  <rect
+                    class="bot-hand"
+                    x="5"
+                    y="52"
+                    width="16"
+                    height="10"
+                    rx="5"
+                  />
+                  <rect
+                    class="bot-hand"
+                    x="71"
+                    y="52"
+                    width="16"
+                    height="10"
+                    rx="5"
+                  />
+                </svg>
+              </div>
+              <div class="detail" id="work-detail" aria-live="polite"></div>
+            </div>
           </div>
           <p class="caption">
+            <svg class="byte" viewBox="0 0 34 36" aria-hidden="true">
+              <path class="byte-body" d="M5 8 V27 Q17 35 29 27 V8" />
+              <ellipse class="byte-top" cx="17" cy="8" rx="12" ry="5" />
+              <g class="byte-eyes">
+                <circle cx="13" cy="18" r="1.7" />
+                <circle cx="21" cy="18" r="1.7" />
+              </g>
+              <path class="byte-smile" d="M14 23 Q17 25.5 20 23" />
+            </svg>
             Contributions within collaborative projects; client-specific code
             and rules are omitted.
           </p>
@@ -161,10 +355,22 @@
         <section id="avs" class="product-shell">
           <span class="eyebrow">02 / FEATURED PRODUCT</span>
           <div class="product-title">
-            <div>
+            <div class="product-name">
+              <span class="avs-note" aria-hidden="true"
+                >built for Indian small businesses<svg viewBox="0 0 40 30">
+                  <path
+                    d="M2 4 C18 2 30 10 34 26 M34 26 L27 23 M34 26 L36 19"
+                  /></svg
+              ></span>
               <h2>avs-corp<span class="product-dot">.</span></h2>
               <span class="product-sub"
                 >The avs. business platform / Collaborative product</span
+              ><a
+                class="product-link"
+                href="https://www.avscorp.in/invoices"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Visit avs-corp Invoices <span aria-hidden="true">↗</span></a
               >
             </div>
             <p>
@@ -172,6 +378,26 @@
               small business—from the first enquiry to stock movement and
               payment collection.
             </p>
+          </div>
+          <div class="avs-marquee" aria-hidden="true">
+            <div class="marquee-inner">
+              <div class="marquee-track">
+                <span>GST reports</span><i>✦</i><span>e-invoice</span><i>✦</i
+                ><span>FIFO lots</span><i>✦</i><span>WhatsApp inbox</span
+                ><i>✦</i><span>Bills of materials</span><i>✦</i
+                ><span>Payment links</span><i>✦</i><span>Barcode labels</span
+                ><i>✦</i><span>Delivery challans</span><i>✦</i
+                ><span>Recurring billing</span><i>✦</i
+                ><span>Report builder</span><i>✦</i><span>GST reports</span
+                ><i>✦</i><span>e-invoice</span><i>✦</i><span>FIFO lots</span
+                ><i>✦</i><span>WhatsApp inbox</span><i>✦</i
+                ><span>Bills of materials</span><i>✦</i
+                ><span>Payment links</span><i>✦</i><span>Barcode labels</span
+                ><i>✦</i><span>Delivery challans</span><i>✦</i
+                ><span>Recurring billing</span><i>✦</i
+                ><span>Report builder</span><i>✦</i>
+              </div>
+            </div>
           </div>
           <div class="product-explorer">
             <div
@@ -232,8 +458,12 @@
               >LinkedIn · TODO: URL</span
             ><span class="todo" data-profile="trailhead"
               >Trailhead · TODO: URL</span
-            ><a href="https://github.com/Karthik-Maharaja-AV">GitHub ↗</a
-            ><span class="todo" data-profile="resume"
+            ><a
+              href="https://github.com/Karthik-Maharaja-AV"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub ↗</a
+            ><span class="todo" data-profile="resume" hidden
               >Résumé PDF · TODO: file</span
             >
           </div>
