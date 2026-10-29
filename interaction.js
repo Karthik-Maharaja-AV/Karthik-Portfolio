@@ -1,4 +1,4 @@
-import './scene.js';
+requestAnimationFrame(()=>requestAnimationFrame(()=>import('./scene.js').catch(()=>{document.querySelector('#sculpture').hidden=true;document.querySelector('.fallback').hidden=false})));
 import { cases, products, profile } from './src/data.js';
 const workList=document.querySelector('#work-list'),workDetail=document.querySelector('#work-detail');
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
