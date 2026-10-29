@@ -1,0 +1,1 @@
+TODO: Add your actual resume.pdf here, then set profile.resume to /resume.pdf in src/data.js. No placeholder PDF has been fabricated.
