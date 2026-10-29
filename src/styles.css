@@ -880,3 +880,7 @@ footer {
 [hidden] { display: none !important; }
 
 .product-dot { color: #d7e9ba; }
+
+/* Cloud-to-invoice illustration */
+.fallback { position:absolute;top:5%;left:0;width:100%;height:74%;object-fit:contain; }
+#motion:disabled { cursor:default;opacity:.7; }
