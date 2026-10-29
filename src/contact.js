@@ -1,2 +1,28 @@
-const form=document.querySelector('form[name="contact"]'),status=document.querySelector('#form-status');
-form.addEventListener('submit',async e=>{e.preventDefault();if(!form.reportValidity())return;const button=form.querySelector('button[type="submit"]');button.disabled=true;status.textContent='Sending…';try{if(['localhost','127.0.0.1'].includes(location.hostname))throw new Error('Local preview: messages can be sent after the site is deployed to Netlify and form detection is enabled.');const response=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()});if(!response.ok)throw new Error('Your message could not be sent. Please try again.');status.textContent='Thank you — your message has been sent.';form.reset();}catch(error){status.textContent=error.message||'Unable to send. Please try again.';}finally{button.disabled=false}});
+const form = document.querySelector('form[name="contact"]'),
+  status = document.querySelector("#form-status");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (!form.reportValidity()) return;
+  const button = form.querySelector('button[type="submit"]');
+  button.disabled = true;
+  status.textContent = "Sending…";
+  try {
+    if (["localhost", "127.0.0.1"].includes(location.hostname))
+      throw new Error(
+        "Local preview: messages can be sent after the site is deployed to Netlify and form detection is enabled.",
+      );
+    const response = await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form)).toString(),
+    });
+    if (!response.ok)
+      throw new Error("Your message could not be sent. Please try again.");
+    status.textContent = "Thank you — your message has been sent.";
+    form.reset();
+  } catch (error) {
+    status.textContent = error.message || "Unable to send. Please try again.";
+  } finally {
+    button.disabled = false;
+  }
+});
