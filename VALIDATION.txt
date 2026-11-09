@@ -1,3 +1,57 @@
+Career scroll effects — 9 November 2026
+- Replaced the one-time entrance reveal with effects driven by the shared scroll frame.
+- Desktop heading stays alongside the timeline; its company chapter follows the active company.
+- Timeline line, company depth/entry, role markers, and connecting segments respond to scrolling in both directions.
+- Browser verified changing line progress and company focus during forward/reverse scrolling, with no console errors observed.
+- Mobile/compact checks at 375px and 320px showed no document horizontal overflow.
+- Reduced-motion preferences disable the transforms and retain visible content and a complete static line; OS preference switching was not browser-tested in this pass.
+- Career dates, designations, locations, and tenure calculations are unchanged.
+
+Experience timeline — 9 November 2026
+- Employment details transcribed from the user-provided LinkedIn Experience screenshot.
+- IBM: Software Developer, Oct 2026–Present; Pune District, Maharashtra, India; Hybrid; Full-time.
+- Red Hat: Associate Software Engineer, Aug 2024–Sep 2026; Intern, Feb 2024–Aug 2024; Pune District, Maharashtra, India; On-site.
+- Inclusive calendar-month checks pass: IBM 2 months, Associate 26 months, Intern 7 months, Red Hat company total 32 months.
+- Red Hat's shared August 2024 is counted once in company tenure; December rollover check updates IBM to 3 months.
+- Career markup is present in build HTML; browser code refreshes current-role tenure in Asia/Kolkata time.
+- Browser checked navigation, all three roles, 1440px desktop, 375px mobile, and 320px compact widths. No horizontal document overflow or browser console errors observed.
+
+Salesforce section improvements — 9 November 2026
+- Revised contribution cards with technical tags and All work / Automation / Experience / Access & data filters.
+- Case-study dialogs show outcomes, individual contribution, approach, and previous/next navigation.
+- Dialog background is inert; keyboard focus is contained and returns to the originating card.
+- Browser checked filtering, filtered counts, next-case navigation, Escape dismissal, and focus return.
+- Filtered galleries that fit the screen do not add idle pinned-scroll distance.
+- Desktop 1440px, mobile 375px, and compact 320px layouts checked; no document horizontal overflow, and gallery footer remains inside the pinned area.
+- Browser console showed no errors in these checks.
+
+Contact and avs-corp improvements — 9 November 2026
+- Product explorer separates module scope from personal contributions and supports four selectable steps per module.
+- Browser checked module changes, step changes, and step reset when switching modules.
+- Contact form includes topic selection, accessible inline validation, character count, and email fallback.
+- Browser checked empty-field and invalid-email errors, error recovery, topic changes, and localhost feedback with preserved message text.
+- At 375px, document width equals viewport width; desktop and mobile layouts visually inspected.
+- Sending/success/server-error/timeout handling is implemented; live production delivery was not tested.
+
+Cinematic local integration — 9 November 2026
+- Latest reflective-sculpture design applied to the Vite entry page.
+- Native document scrolling replaces the embedded artifact viewport.
+- Production build passes; the shader, icons, and content are local modules.
+- Browser verified active WebGL sculpture and scroll transformation; case dialog opens and closes.
+- Light/dark switch works. At 375px, document width equals viewport width.
+- Contact form check on localhost shows the deployment-required feedback without transmitting.
+- The renderer initialization error observed during integration is fixed and rechecked in-browser.
+- No production deployment, live form delivery, new Lighthouse run, or hardware frame-rate benchmark.
+
+Liquid-glass redesign — 9 November 2026
+- Production build passes with the glass design and simplified motion.
+- Browser checks: desktop at 1440px and mobile at 375px; no document horizontal overflow at those widths.
+- Light/dark theme switch, Salesforce case selection, product-module selection, and section navigation checked.
+- Mobile contact layout fits; browser console showed no errors during checks.
+- Actual backdrop-filter blur verified in the browser. No external rendering libraries were added.
+- Reduced-motion and no-backdrop fallbacks are implemented; OS-level preference switching was not tested.
+- Prior Lighthouse and contrast numbers below apply to the former design and have not been rerun.
+
 Validation — 29 October 2026
 
 Six implementation phases, each built and committed:

@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import { profile } from "./src/data.js";
+import { renderExperience } from "./src/experience.js";
 const origin = (
   process.env.SITE_URL ||
   profile.domain ||
@@ -12,7 +13,9 @@ export default defineConfig({
     {
       name: "portfolio-domain",
       transformIndexHtml(html) {
-        return html.replaceAll("https://YOUR-DOMAIN.example", origin);
+        return html
+          .replace("<!-- EXPERIENCE_TIMELINE -->", renderExperience())
+          .replaceAll("https://YOUR-DOMAIN.example", origin);
       },
       generateBundle() {
         this.emitFile({

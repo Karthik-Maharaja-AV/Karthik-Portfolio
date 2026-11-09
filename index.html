@@ -8,15 +8,7 @@
       content="Karthik Maharaja AV — Salesforce developer and product contributor. Explore Salesforce contributions and the avs-corp product."
     />
     <title>Karthik — Systems, with a human side.</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      data-fonts
-      media="print"
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap"
-    />
-    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="/src/cinematic.css" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <!-- TODO: replace https://YOUR-DOMAIN.example with the final production origin. -->
     <meta property="og:type" content="website" />
@@ -44,481 +36,96 @@
       content="https://YOUR-DOMAIN.example/og-image.png"
     />
     <script src="/theme.js"></script>
-    <script type="module" src="/src/fonts.js"></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <div class="intro-curtain" hidden aria-hidden="true">
-      <span class="greeting">Hello</span
-      ><svg viewBox="0 0 100 20" preserveAspectRatio="none">
-        <path d="M0 0 H100 V0 Q50 40 0 0 Z" />
-      </svg>
-    </div>
-    <div class="page-transition" hidden aria-hidden="true">
-      <svg class="pt-top" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0 100 Q50 0 100 100 Z" />
-      </svg>
-      <span class="pt-label"></span>
-      <svg class="pt-bottom" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0 0 Q50 0 100 0 Z" />
-      </svg>
-    </div>
-    <div class="scroll-progress" aria-hidden="true"></div>
-    <div class="spotlight" aria-hidden="true"></div>
-    <div class="wrap">
-      <nav>
-        <a href="#" class="brand" aria-label="Karthik home"
-          >karthik<span>.</span></a
-        >
-        <div class="links">
-          <a href="#work">Salesforce</a><a href="#avs">avs-corp</a
-          ><a href="#about">About</a><a href="#contact">Contact</a
-          ><button
-            type="button"
-            class="theme-toggle"
-            aria-label="Switch to dark theme"
-          >
-            <svg
-              class="sun"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              aria-hidden="true"
-            >
-              <circle cx="12" cy="12" r="4" />
-              <path
-                d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
-              />
-            </svg>
-            <svg
-              class="moon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
-            </svg>
-          </button>
-        </div>
-      </nav>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="apple-portfolio" aria-label="Karthik developer portfolio">
+  <div class="ap-site">
+    <header class="ap-global"><button class="ap-monogram cursor-interaction" data-go="top" aria-label="Karthik home">k.</button><nav aria-label="Main navigation"><button class="cursor-interaction" data-go="work">Salesforce</button><button class="cursor-interaction" data-go="product">avs-corp</button><button class="cursor-interaction" data-go="experience">Experience</button><button class="cursor-interaction" data-go="about">About</button><a class="cursor-interaction" href="https://github.com/Karthik-Maharaja-AV" target="_blank" rel="noopener noreferrer">GitHub</a></nav><a class="ap-global-mail cursor-interaction" href="mailto:avkm2002@gmail.com" aria-label="Email Karthik"><i data-lucide="mail" aria-hidden="true"></i></a><button type="button" class="theme-toggle cursor-interaction" aria-label="Switch to dark theme"><span class="sun" aria-hidden="true">☀</span><span class="moon" aria-hidden="true">☾</span></button></header>
+    <div class="ap-scroll" aria-label="Portfolio website">
+      <div class="ap-local"><button class="ap-local-title cursor-interaction" data-go="top">Karthik Maharaja AV</button><div><button class="ap-local-overview cursor-interaction" data-go="experience">Experience</button><button class="ap-local-work cursor-interaction" data-go="work">The work</button><button class="ap-pill ap-small cursor-interaction" type="button" data-go="contact">Let's talk</button></div></div>
       <main id="main">
-        <section class="hero">
-          <div class="hero-copy">
-            <span class="eyebrow">KARTHIK MAHARAJA AV / DEVELOPER</span>
-            <h1>Systems, with<br />a <em>human side.</em></h1>
-            <p class="role-line">Salesforce Developer · Apex · Flow · Admin</p>
-            <p>
-              I connect business needs with working software. Salesforce is my
-              foundation. Building useful products is what keeps me curious.
-            </p>
-            <div class="actions">
-              <a href="#work" class="button">Explore the work <span>↘</span></a
-              ><a href="#avs" class="text-link">Meet avs-corp ↗</a>
-            </div>
+        <section class="ap-hero" data-section="top" id="top">
+          <div class="ap-hero-copy"><p class="ap-kicker">SALESFORCE DEVELOPER & PRODUCT CONTRIBUTOR</p><h1>Ideas.<br><span>Engineered.</span></h1><p class="ap-hero-sub">Business logic. Beautifully connected.</p><div class="ap-hero-actions"><button class="ap-pill cursor-interaction" data-go="work">Explore the work</button><button class="ap-text-link cursor-interaction" data-go="product">Meet avs-corp <span aria-hidden="true">›</span></button></div></div>
+          <div class="ap-chip-stage" role="img" aria-label="Layered titanium-style Apex chip with a luminous blue and violet edge; conceptual illustration of Salesforce development">
+            <div class="ap-stage-glow"></div><div class="ap-chip-shadow"></div><div class="ap-chip-stack"><div class="ap-chip-layer ap-chip-bottom"></div><div class="ap-chip-layer ap-chip-middle"></div><div class="ap-chip-layer ap-chip-front"><span class="ap-chip-tiny">BUILT TO CONNECT</span><strong>Apex</strong><span class="ap-chip-sub">Logic with a human side.</span><span class="ap-chip-line"></span></div></div><span class="ap-art-label">A strong foundation. Endless connections.</span>
           </div>
-          <div class="scene">
-            <div
-              class="system-switch"
-              role="group"
-              aria-label="Choose workflow model"
-            >
-              <button data-system="salesforce" aria-pressed="true">
-                Salesforce</button
-              ><button data-system="avs" aria-pressed="false">avs-corp</button>
-            </div>
-            <canvas
-              hidden
-              id="sculpture"
-              tabindex="0"
-              aria-label="From cloud to invoice: an illustrative 3D business workflow. Drag or use arrow keys to change the view. Select a module below to explore."
-            ></canvas
-            ><img
-              class="fallback"
-              src="/story.svg"
-              width="640"
-              height="540"
-              alt="Cloud records flowing into a stamped invoice and stock boxes"
-            />
-            <div class="scene-controls">
-              <span>DRAG TO ORBIT · SELECT A MODULE</span
-              ><button
-                id="motion"
-                aria-label="Pause workflow animation"
-                aria-pressed="false"
-              >
-                Ⅱ
-              </button>
-            </div>
-            <div
-              class="node-controls"
-              role="group"
-              aria-label="Explore workflow modules"
-            >
-              <button data-node="0">CRM</button
-              ><button data-node="1">Automation</button
-              ><button data-node="2">Access</button
-              ><button data-node="3">Data</button>
-            </div>
-            <p id="system-description" aria-live="polite"></p>
-          </div>
-          <div class="hero-foot">
-            <span>SALESFORCE · PRODUCT DEVELOPMENT</span
-            ><a href="#work">SCROLL TO EXPLORE ↓</a>
-          </div>
+          <div class="ap-chip-picker" role="group" aria-label="Explore Salesforce capabilities"><button class="cursor-interaction" data-capability="apex" aria-pressed="true">Apex</button><button class="cursor-interaction" data-capability="flow" aria-pressed="false">Flow</button><button class="cursor-interaction" data-capability="data" aria-pressed="false">Data</button></div><p class="ap-capability-detail" aria-live="polite">Business logic and tests. Built to work together.</p>
         </section>
-        <section id="work" class="section">
-          <div class="heading">
-            <div>
-              <span class="eyebrow">01 / INSIDE THE WORK</span>
-              <h2>Pick a problem.<br />See what changed.</h2>
-              <svg class="squiggle" viewBox="0 0 300 20" aria-hidden="true">
-                <path
-                  d="M2 12 C30 2 50 20 80 10 S130 2 160 12 S220 20 250 8 S290 6 298 10"
-                />
-              </svg>
-            </div>
-            <div class="work-art" aria-hidden="true">
-              <svg class="constellation" viewBox="0 0 380 230">
-                <path
-                  class="cloud-outline"
-                  d="M70 190 C28 190 22 128 70 122 C66 80 116 60 146 86 C162 42 228 38 248 84 C280 62 326 84 318 124 C360 128 356 190 312 190 Z"
-                />
-                <g class="links">
-                  <path d="M108 150 L160 112" />
-                  <path d="M160 112 L214 98" />
-                  <path d="M214 98 L268 130" />
-                  <path d="M268 130 L236 164" />
-                  <path d="M236 164 L166 166" />
-                  <path d="M166 166 L108 150" />
-                  <path d="M160 112 L166 166" />
-                  <path d="M214 98 L236 164" />
-                </g>
-                <g transform="translate(108 150)">
-                  <g class="node" data-case="0">
-                    <circle class="halo" r="15" />
-                    <circle r="6.5" />
-                    <text y="-14">Apex</text>
-                  </g>
-                </g>
-                <g transform="translate(160 112)">
-                  <g class="node" data-case="1">
-                    <circle class="halo" r="15" />
-                    <circle r="6.5" />
-                    <text y="-14">CRM</text>
-                  </g>
-                </g>
-                <g transform="translate(214 98)">
-                  <g class="node" data-case="2">
-                    <circle class="halo" r="15" />
-                    <circle r="6.5" />
-                    <text y="-14">Flow</text>
-                  </g>
-                </g>
-                <g transform="translate(268 130)">
-                  <g class="node" data-case="3">
-                    <circle class="halo" r="15" />
-                    <circle r="6.5" />
-                    <text y="-14">Access</text>
-                  </g>
-                </g>
-                <g transform="translate(236 164)">
-                  <g class="node" data-case="4">
-                    <circle class="halo" r="15" />
-                    <circle r="6.5" />
-                    <text y="24">Release</text>
-                  </g>
-                </g>
-                <g transform="translate(166 166)">
-                  <g class="node" data-case="5">
-                    <circle class="halo" r="15" />
-                    <circle r="6.5" />
-                    <text y="24">Data</text>
-                  </g>
-                </g>
-                <g transform="translate(300 40)">
-                  <g class="cirrus">
-                    <g class="cirrus-float">
-                      <path
-                        class="cirrus-body"
-                        d="M8 36 C-5 36 -5 18 8 17 C8 5 23 1 29 10 C34 -1 52 2 51 15 C62 15 63 36 51 36 Z"
-                      />
-                      <g class="cirrus-eyes">
-                        <circle cx="21" cy="23" r="2.3" />
-                        <circle cx="36" cy="23" r="2.3" />
-                      </g>
-                      <path class="cirrus-smile" d="M25 29 Q28.5 32 32 29" />
-                      <circle class="blush" cx="15" cy="28" r="2.6" />
-                      <circle class="blush" cx="42" cy="28" r="2.6" />
-                      <path class="cirrus-arm" d="M55 25 Q63 21 64 12" />
-                    </g>
-                  </g>
-                </g>
-                <g transform="translate(46 98)">
-                  <path
-                    class="sparkle"
-                    d="M0 -7 L1.8 -1.8 L7 0 L1.8 1.8 L0 7 L-1.8 1.8 L-7 0 L-1.8 -1.8 Z"
-                  />
-                </g>
-                <g transform="translate(286 206)">
-                  <path
-                    class="sparkle"
-                    d="M0 -5 L1.3 -1.3 L5 0 L1.3 1.3 L0 5 L-1.3 1.3 L-5 0 L-1.3 -1.3 Z"
-                  />
-                </g>
-                <g transform="translate(120 46)">
-                  <path
-                    class="sparkle"
-                    d="M0 -5 L1.3 -1.3 L5 0 L1.3 1.3 L0 5 L-1.3 1.3 L-5 0 L-1.3 -1.3 Z"
-                  />
-                </g>
-              </svg>
-              <span class="doodle-note">hover a case, watch it light up ↓</span>
-            </div>
-            <p>
-              Salesforce contributions across business logic, guided workflows,
-              access, and data. Choose a chapter, then explore the overview,
-              changes, and approach.
-            </p>
+        <section class="ap-intro ap-content" data-section="intro" id="intro"><p class="ap-section-kicker">A little logic. A human touch.</p><h2>Complexity, simplified.<br><span>That's the work.</span></h2><p>I connect business needs with working software. From Salesforce automation to everyday product workflows, I care about how the pieces work together. And how they feel to use.</p></section>
+        <section class="ap-work" data-section="work" id="work">
+          <div class="ap-section-heading ap-content">
+            <div><p class="ap-work-eyebrow">SALESFORCE / SELECTED CONTRIBUTIONS</p><h2>Built around<br>the way people work.</h2></div>
+            <div class="ap-work-intro"><span class="ap-work-brand"><i data-lucide="cloud" aria-hidden="true"></i> Salesforce</span><p>Clearer logic. Easier workflows. The configuration, access, and data that keep everything connected.</p></div>
           </div>
-          <div class="explorer">
-            <div
-              class="work-list"
-              role="group"
-              aria-label="Choose a Salesforce contribution"
-              id="work-list"
-            ></div>
-            <div class="detail-wrap">
-              <div class="bot-peek" aria-hidden="true">
-                <svg class="bolt-bot" viewBox="0 0 92 62">
-                  <path class="bot-line" d="M46 18 V24" />
-                  <path
-                    class="bot-bolt"
-                    d="M47 0 L40 11 H46 L42 20 L53 7 H47 L51 0 Z"
-                  />
-                  <path
-                    class="bot-head"
-                    d="M16 62 V38 Q16 22 32 22 H60 Q76 22 76 38 V62 Z"
-                  />
-                  <rect
-                    class="bot-screen"
-                    x="24"
-                    y="30"
-                    width="44"
-                    height="24"
-                    rx="9"
-                  />
-                  <circle class="bot-eye" cx="38" cy="42" r="6" />
-                  <circle class="bot-eye" cx="54" cy="42" r="6" />
-                  <circle class="pupil" cx="38" cy="42" r="2.6" />
-                  <circle class="pupil" cx="54" cy="42" r="2.6" />
-                  <rect
-                    class="bot-hand"
-                    x="5"
-                    y="52"
-                    width="16"
-                    height="10"
-                    rx="5"
-                  />
-                  <rect
-                    class="bot-hand"
-                    x="71"
-                    y="52"
-                    width="16"
-                    height="10"
-                    rx="5"
-                  />
-                </svg>
+          <div class="ap-work-controls ap-content"><div class="ap-work-filters" role="group" aria-label="Filter Salesforce contributions"><button type="button" class="cursor-interaction" data-work-filter="all" aria-pressed="true">All work</button><button type="button" class="cursor-interaction" data-work-filter="automation" aria-pressed="false">Automation</button><button type="button" class="cursor-interaction" data-work-filter="experience" aria-pressed="false">Experience</button><button type="button" class="cursor-interaction" data-work-filter="access-data" aria-pressed="false">Access & data</button></div><span class="ap-work-count" id="ap-work-count" role="status" aria-live="polite">06 contributions</span></div>
+          <div class="ap-gallery-wrap"><div class="ap-gallery" id="salesforce-gallery" aria-label="Salesforce contribution gallery"></div></div>
+          <div class="ap-gallery-footer ap-content"><span>Built collaboratively. My contribution, in each story.</span><div><button class="ap-circle cursor-interaction" data-gallery="-1" aria-label="Previous contributions"><i data-lucide="chevron-left" aria-hidden="true"></i></button><button class="ap-circle cursor-interaction" data-gallery="1" aria-label="Next contributions"><i data-lucide="chevron-right" aria-hidden="true"></i></button></div></div>
+        </section>
+        <section class="ap-product ap-content" data-section="product" id="product">
+          <div class="ap-product-heading">
+            <div><p class="ap-section-kicker">THE COLLABORATIVE PRODUCT</p><h2>One business.<br><span>All connected.</span></h2></div>
+            <div class="ap-product-intro"><span class="ap-product-wordmark">avs-corp<span>.</span></span><p>A workspace for the everyday operations of an Indian small business. From the first enquiry to finished goods and the reports that connect them.</p><a class="ap-text-link cursor-interaction" href="https://www.avscorp.in/invoices" target="_blank" rel="noopener noreferrer">Explore avs-corp <span aria-hidden="true">↗</span></a></div>
+          </div>
+          <div class="ap-product-visual">
+            <div class="ap-product-tabs" role="group" aria-label="Explore product contributions">
+              <button class="cursor-interaction" data-product="crm" aria-pressed="true" aria-controls="product-showcase"><i data-lucide="handshake" aria-hidden="true"></i> Sales & CRM</button>
+              <button class="cursor-interaction" data-product="manufacturing" aria-pressed="false" aria-controls="product-showcase"><i data-lucide="boxes" aria-hidden="true"></i> Manufacturing</button>
+              <button class="cursor-interaction" data-product="reports" aria-pressed="false" aria-controls="product-showcase"><i data-lucide="chart-no-axes-combined" aria-hidden="true"></i> Reports</button>
+            </div>
+            <div class="ap-product-model" id="product-showcase">
+              <div class="ap-product-story">
+                <span class="ap-module-number">01 / SALES & CRM</span>
+                <h3 class="ap-module-title">From conversation<br>to conversion.</h3>
+                <p class="ap-module-summary">Lead capture, opportunity stages, quotes, sales orders, invoices, and recurring billing.</p>
+                <ul class="ap-module-features"></ul>
+                <div class="ap-product-contribution"><span>MY CONTRIBUTION</span><p></p></div>
               </div>
-              <div class="detail" id="work-detail" aria-live="polite"></div>
-            </div>
-          </div>
-          <p class="caption">
-            <svg class="byte" viewBox="0 0 34 36" aria-hidden="true">
-              <path class="byte-body" d="M5 8 V27 Q17 35 29 27 V8" />
-              <ellipse class="byte-top" cx="17" cy="8" rx="12" ry="5" />
-              <g class="byte-eyes">
-                <circle cx="13" cy="18" r="1.7" />
-                <circle cx="21" cy="18" r="1.7" />
-              </g>
-              <path class="byte-smile" d="M14 23 Q17 25.5 20 23" />
-            </svg>
-            Contributions within collaborative projects; client-specific code
-            and rules are omitted.
-          </p>
-        </section>
-        <section id="avs" class="product-shell">
-          <span class="eyebrow">02 / FEATURED PRODUCT</span>
-          <div class="product-title">
-            <div class="product-name">
-              <span class="avs-note" aria-hidden="true"
-                >built for Indian small businesses<svg viewBox="0 0 40 30">
-                  <path
-                    d="M2 4 C18 2 30 10 34 26 M34 26 L27 23 M34 26 L36 19"
-                  /></svg
-              ></span>
-              <h2>avs-corp<span class="product-dot">.</span></h2>
-              <span class="product-sub"
-                >The avs. business platform / Collaborative product</span
-              ><a
-                class="product-link"
-                href="https://www.avscorp.in/invoices"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Visit avs-corp Invoices <span aria-hidden="true">↗</span></a
-              >
-            </div>
-            <p>
-              One connected workspace for the everyday operations of an Indian
-              small business—from the first enquiry to stock movement and
-              payment collection.
-            </p>
-          </div>
-          <div class="avs-marquee" aria-hidden="true">
-            <div class="marquee-inner">
-              <div class="marquee-track">
-                <span>GST reports</span><i>✦</i><span>e-invoice</span><i>✦</i
-                ><span>FIFO lots</span><i>✦</i><span>WhatsApp inbox</span
-                ><i>✦</i><span>Bills of materials</span><i>✦</i
-                ><span>Payment links</span><i>✦</i><span>Barcode labels</span
-                ><i>✦</i><span>Delivery challans</span><i>✦</i
-                ><span>Recurring billing</span><i>✦</i
-                ><span>Report builder</span><i>✦</i><span>GST reports</span
-                ><i>✦</i><span>e-invoice</span><i>✦</i><span>FIFO lots</span
-                ><i>✦</i><span>WhatsApp inbox</span><i>✦</i
-                ><span>Bills of materials</span><i>✦</i
-                ><span>Payment links</span><i>✦</i><span>Barcode labels</span
-                ><i>✦</i><span>Delivery challans</span><i>✦</i
-                ><span>Recurring billing</span><i>✦</i
-                ><span>Report builder</span><i>✦</i>
+              <div class="ap-workspace">
+                <div class="ap-product-model-label"><span>avs.</span><span>WORKFLOW EXPLORER</span><span aria-hidden="true">↗</span></div>
+                <div class="ap-workspace-scene"><div class="ap-workspace-orbit" aria-hidden="true"></div><div class="ap-workspace-symbol" aria-hidden="true"><i data-lucide="message-square"></i></div><span class="ap-workspace-step">STEP 01 / 04</span></div>
+                <div class="ap-selected-step" aria-live="polite" aria-atomic="true"><h4>Every sale starts somewhere.</h4><p>Capture an enquiry and give the conversation a clear next step.</p></div>
+                <div class="ap-product-journey" role="group" aria-label="Explore workflow steps"></div>
+                <div class="ap-model-bottom"><span>Select a step to explore</span><span class="ap-model-status">Sales & CRM</span></div>
               </div>
             </div>
           </div>
-          <div class="product-explorer">
-            <div
-              class="module-nav"
-              id="module-nav"
-              role="group"
-              aria-label="Explore avs-corp product modules"
-            ></div>
-            <div
-              class="module-panel"
-              id="module-panel"
-              aria-live="polite"
-            ></div>
-          </div>
-          <div class="product-note">
-            A collaborative billing and operations product; individual
-            contributions are identified above. This overview illustrates
-            product scope, with some features dependent on configuration.
-          </div>
+          <p class="ap-fine-print">Illustrative workflows, not product screenshots. Built collaboratively; contributions and feature scope are identified above.</p>
         </section>
-        <section id="about" class="about">
-          <div>
-            <span class="eyebrow">03 / THE PERSON BEHIND THE WORK</span>
-            <h2>I like the part where<br />it all connects.</h2>
-          </div>
-          <div>
-            <p>
-              I’m Karthik Maharaja AV. My work moves between Salesforce logic,
-              configuration, data, and product interfaces. I’m interested in how
-              the pieces behave together—not just how a single screen looks.
-            </p>
-            <p>
-              My contributions include Apex and tests, screen-flow experiences,
-              permissions, CRM pipelines, report building, and manufacturing
-              workflows. I also build personal tools with AI assistance,
-              including a tracker for my Salesforce learning.
-            </p>
-            <p class="todo" data-profile="tracker">
-              TODO: Salesforce learning tracker URL
-            </p>
-            <div class="learning">
-              <span>Administrator · learning goal</span
-              ><span>Platform Developer / PD1 · learning goal</span>
-            </div>
-            <p class="caption">Preparing for Admin and PD1 certifications.</p>
-          </div>
+        <section class="ap-experience ap-content" data-section="experience" id="experience" aria-labelledby="experience-title">
+          <div class="ap-experience-heading"><div><p class="ap-section-kicker">THE PROFESSIONAL JOURNEY</p><h2 id="experience-title">Experience.<br><span>Built over time.</span></h2></div><div class="ap-experience-intro"><p>From an internship at Red Hat<br> to software development at IBM.</p><a class="ap-text-link cursor-interaction" href="https://www.linkedin.com/in/karthik-maharaja-av-508622145/" target="_blank" rel="noopener noreferrer">View LinkedIn profile <span aria-hidden="true">↗</span></a></div></div>
+          <div class="ap-experience-list"><!-- EXPERIENCE_TIMELINE --></div>
         </section>
-        <section class="contact" id="contact">
-          <div class="contact-curve" aria-hidden="true"></div>
-          <div>
-            <span class="eyebrow">NEXT CONVERSATION</span>
-            <h2>Something worth building?</h2>
+        <section class="ap-person" data-section="about" id="about"><div class="ap-content"><p class="ap-section-kicker">BEHIND THE WORK</p><h2>Curiosity.<br><span>Always on.</span></h2><div class="ap-person-grid"><p>I'm Karthik Maharaja AV. My work moves between logic, configuration, data, and product interfaces. The interesting part is where it all connects.</p><div><p>I also build personal tools with AI assistance, including a tracker for my Salesforce learning. Currently preparing for Administrator and Platform Developer I certifications.</p><a class="ap-text-link cursor-interaction" href="https://github.com/Karthik-Maharaja-AV/salesforce-learning" target="_blank" rel="noopener noreferrer">See what I'm learning <span aria-hidden="true">↗</span></a></div></div></div></section>
+        <section class="ap-contact ap-content" data-section="contact" id="contact">
+          <div class="ap-contact-heading"><p class="ap-section-kicker">THE NEXT CONVERSATION</p><h2>A good idea<br>starts with <span>hello.</span></h2><p>Have a workflow to simplify or a product worth building?<br> Tell me a little about it.</p></div>
+          <div class="ap-contact-layout">
+            <aside class="ap-contact-aside">
+              <span class="ap-contact-mark" aria-hidden="true">k.</span><h3>Let's connect<br>the right pieces.</h3><p>Salesforce logic, useful interfaces, and the details that make a system work.</p>
+              <div class="ap-contact-direct"><span>PREFER EMAIL?</span><a class="cursor-interaction" href="mailto:avkm2002@gmail.com">avkm2002@gmail.com <span aria-hidden="true">↗</span></a></div>
+              <div class="ap-contact-socials"><a class="cursor-interaction" href="https://www.linkedin.com/in/karthik-maharaja-av-508622145/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="cursor-interaction" href="https://www.salesforce.com/trailblazer/maharaja25" target="_blank" rel="noopener noreferrer">Trailhead ↗</a><a class="cursor-interaction" href="https://github.com/Karthik-Maharaja-AV" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+            </aside>
+            <form class="ap-contact-form" name="contact" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="contact" />
+              <p hidden><label>Leave this empty<input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+              <div class="ap-form-heading"><h3>Send a message.</h3><p>A few details to start the conversation.</p></div>
+              <fieldset class="ap-topic-field"><legend>What would you like to talk about?</legend><div class="ap-topic-options"><label><input type="radio" name="topic" value="Salesforce" checked /><span>Salesforce</span></label><label><input type="radio" name="topic" value="Product work" /><span>Product work</span></label><label><input type="radio" name="topic" value="Say hello" /><span>Say hello</span></label></div></fieldset>
+              <div class="form-row">
+                <div class="ap-form-field"><label for="contact-name">Your name <span aria-hidden="true">*</span></label><input id="contact-name" required name="name" autocomplete="name" maxlength="100" placeholder="Alex Taylor" aria-describedby="name-error" /><span class="ap-field-error" id="name-error"></span></div>
+                <div class="ap-form-field"><label for="contact-email">Email address <span aria-hidden="true">*</span></label><input id="contact-email" required type="email" name="email" autocomplete="email" maxlength="254" placeholder="alex@company.com" aria-describedby="email-error" /><span class="ap-field-error" id="email-error"></span></div>
+              </div>
+              <div class="ap-form-field"><label for="contact-message">What's on your mind? <span aria-hidden="true">*</span></label><textarea id="contact-message" required name="message" rows="5" maxlength="5000" placeholder="The idea, the challenge, or what you'd like to work on together…" aria-describedby="message-error message-hint"></textarea><span class="ap-field-error" id="message-error"></span><div class="ap-message-meta"><span id="message-hint">A little context goes a long way.</span><span id="message-count">0 / 5,000</span></div></div>
+              <div class="ap-form-footer"><p>Name, email, and message<br>are required.</p><button class="ap-pill" type="submit"><span class="ap-submit-label">Send message</span><span class="ap-submit-arrow" aria-hidden="true">↗</span><span class="ap-submit-spinner" aria-hidden="true"></span></button></div>
+              <div id="form-status" role="status" aria-live="polite" aria-atomic="true"></div><a class="ap-form-fallback cursor-interaction" href="mailto:avkm2002@gmail.com" hidden>Send an email instead ↗</a>
+            </form>
           </div>
-          <div class="contact-links">
-            <span class="button todo" data-profile="email"
-              >Email · TODO: address</span
-            ><span class="todo" data-profile="linkedin"
-              >LinkedIn · TODO: URL</span
-            ><span class="todo" data-profile="trailhead"
-              >Trailhead · TODO: URL</span
-            ><a
-              href="https://github.com/Karthik-Maharaja-AV"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub ↗</a
-            ><span class="todo" data-profile="resume" hidden
-              >Résumé PDF · TODO: file</span
-            >
-          </div>
-          <form
-            name="contact"
-            method="POST"
-            action="/thank-you.html"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <p hidden>
-              <label
-                >Leave this empty<input
-                  name="bot-field"
-                  tabindex="-1"
-                  autocomplete="off"
-              /></label>
-            </p>
-            <div class="form-row">
-              <label
-                >Your name<input
-                  required
-                  name="name"
-                  autocomplete="name"
-                  maxlength="100" /></label
-              ><label
-                >Email address<input
-                  required
-                  type="email"
-                  name="email"
-                  autocomplete="email"
-                  maxlength="254"
-              /></label>
-            </div>
-            <label
-              >What would you like to discuss?<textarea
-                required
-                name="message"
-                rows="5"
-                maxlength="5000"
-              ></textarea></label
-            ><button class="button" type="submit">
-              Send message <span aria-hidden="true">↗</span>
-            </button>
-            <p id="form-status" role="status" aria-live="polite"></p>
-          </form>
         </section>
       </main>
-      <footer>
-        <span>© 2026 Karthik Maharaja AV</span
-        ><span>Independent portfolio · Built with curiosity.</span
-        ><a href="#">Back to top ↑</a>
-      </footer>
+      <footer class="ap-footer"><div class="ap-content"><p>Independent portfolio. Salesforce work and avs-corp features were developed within collaborative projects. Client-specific code and business rules are omitted.</p><div><span>Copyright © 2026 Karthik Maharaja AV.</span><button class="cursor-interaction" data-go="top">Back to top ↑</button></div></div></footer>
     </div>
-    <script type="module" src="./interaction.js"></script>
-  </body>
+  </div>
+  <div class="ap-modal" hidden role="dialog" aria-modal="true" aria-labelledby="ap-modal-title"><div class="ap-modal-scrim"></div><div class="ap-modal-sheet"><button class="ap-modal-close ap-circle cursor-interaction" aria-label="Close case study"><i data-lucide="x" aria-hidden="true"></i></button><div class="ap-modal-content"></div></div></div>
+</div>
+<script type="module" src="/src/cinematic.js"></script>
+</body>
 </html>

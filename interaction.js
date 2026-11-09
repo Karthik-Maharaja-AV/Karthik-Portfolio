@@ -1,4 +1,4 @@
-import "./src/story.js";
+import "./src/glass.js";
 import { cases, products, profile } from "./src/data.js";
 const workList = document.querySelector("#work-list"),
   workDetail = document.querySelector("#work-detail");

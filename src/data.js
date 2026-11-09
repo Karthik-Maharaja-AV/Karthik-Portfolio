@@ -187,3 +187,47 @@ export const profile = {
   tracker: "https://github.com/Karthik-Maharaja-AV/salesforce-learning",
   domain: "",
 }; // TODO: Supply resume and domain before publishing.
+
+// Verified from the LinkedIn Experience screenshot supplied on 9 November 2026.
+// Dates are inclusive calendar months, matching LinkedIn's tenure convention.
+export const experience = [
+  {
+    id: "ibm",
+    company: "IBM",
+    mark: "IBM",
+    location: "Pune District, Maharashtra, India",
+    workMode: "Hybrid",
+    roles: [
+      {
+        id: "ibm-developer",
+        title: "Software Developer",
+        type: "Full-time",
+        start: "2026-10",
+        end: null,
+      },
+    ],
+  },
+  {
+    id: "red-hat",
+    company: "Red Hat",
+    mark: "rh.",
+    location: "Pune District, Maharashtra, India",
+    workMode: "On-site",
+    roles: [
+      {
+        id: "red-hat-engineer",
+        title: "Associate Software Engineer",
+        type: "Full-time",
+        start: "2024-08",
+        end: "2026-09",
+      },
+      {
+        id: "red-hat-intern",
+        title: "Intern",
+        type: "Internship",
+        start: "2024-02",
+        end: "2024-08",
+      },
+    ],
+  },
+];

@@ -1,0 +1,1953 @@
+#apple-portfolio {
+  --ap-page:light-dark(#fff,#101010);
+  --ap-ink:light-dark(#1d1d1f,#f5f5f7);
+  --ap-muted:light-dark(#6e6e73,#a1a1a6);
+  --ap-section:light-dark(#f5f5f7,#1b1b1d);
+  --ap-card:light-dark(#fff,#262628);
+  --ap-line:light-dark(#d2d2d7,#3b3b3f);
+  --ap-nav:light-dark(#fafafacc,#191919dd);
+  --ap-blue:light-dark(#0066cc,#65adff);
+  --ap-pill:#0071e3;
+  --ap-chrome:#bfc2d0;
+  font:14px/1.45 -apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
+  color:var(--ap-ink);
+  text-align:left;
+  background:var(--ap-page);
+  width:100%;
+  position:relative;
+  isolation:isolate;
+}
+#apple-portfolio * {
+  box-sizing:border-box;
+}
+#apple-portfolio h1,#apple-portfolio h2,#apple-portfolio h3,#apple-portfolio p {
+  margin:0;
+}
+#apple-portfolio button,#apple-portfolio a {
+  font:inherit;
+  color:inherit;
+}
+#apple-portfolio button {
+  border:0;
+  background:none;
+}
+#apple-portfolio a {
+  text-decoration:none;
+}
+#apple-portfolio button:focus-visible,#apple-portfolio a:focus-visible {
+  outline:3px solid #2997ff;
+  outline-offset:4px;
+}
+#apple-portfolio [hidden] {
+  display:none!important;
+}
+#apple-portfolio svg {
+  width:17px;
+  height:17px;
+  display:block;
+}
+#apple-portfolio .ap-global {
+  height:45px;
+  display:flex;
+  align-items:center;
+  padding:0 110px 0 6%;
+  gap:40px;
+  background:var(--ap-section);
+  color:var(--ap-ink);
+}
+#apple-portfolio .ap-monogram {
+  font-size:24px;
+  font-weight:650;
+  letter-spacing:-2px;
+  padding:0;
+}
+#apple-portfolio .ap-global nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:42px;
+  flex:1;
+  max-width:520px;
+  margin:auto;
+  font-size:11px;
+}
+#apple-portfolio .ap-global nav button {
+  padding:8px 0;
+}
+#apple-portfolio .ap-global-mail {
+  margin-left:auto;
+}
+#apple-portfolio .ap-scroll {
+  height:810px;
+  overflow:auto;
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+  scrollbar-color:var(--ap-line) transparent;
+  scroll-behavior:smooth;
+}
+#apple-portfolio .ap-local {
+  position:sticky;
+  top:0;
+  z-index:10;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  padding:0 6%;
+  height:58px;
+  border-bottom:1px solid var(--ap-line);
+  background:var(--ap-nav);
+  -webkit-backdrop-filter:blur(20px) saturate(180%);
+  backdrop-filter:blur(20px) saturate(180%);
+}
+#apple-portfolio .ap-local-title {
+  font-size:19px;
+  font-weight:600;
+  letter-spacing:-.6px;
+  padding:0;
+}
+#apple-portfolio .ap-local>div {
+  display:flex;
+  align-items:center;
+  gap:25px;
+  font-size:11px;
+}
+#apple-portfolio .ap-local button {
+  padding:10px 0;
+}
+#apple-portfolio .ap-pill {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:12px 23px;
+  background:var(--ap-pill);
+  color:#fff;
+  border-radius:30px;
+  font-size:15px;
+  white-space:nowrap;
+  transition:background .2s,transform .2s;
+}
+#apple-portfolio .ap-pill:hover {
+  background:#0077ed;
+  transform:translateY(-1px);
+}
+#apple-portfolio .ap-pill.ap-small {
+  min-height:28px;
+  padding:5px 13px;
+  font-size:11px;
+}
+#apple-portfolio .ap-text-link {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  color:var(--ap-blue);
+  font-size:17px;
+  padding:7px 0;
+}
+#apple-portfolio .ap-text-link:hover {
+  text-decoration:underline;
+}
+#apple-portfolio .ap-text-link span {
+  font-size:25px;
+  line-height:1;
+}
+#apple-portfolio .ap-content {
+  width:86%;
+  max-width:920px;
+  margin-inline:auto;
+}
+#apple-portfolio .ap-hero {
+  position:relative;
+  text-align:center;
+  background:#000;
+  color:#f5f5f7;
+  overflow:hidden;
+  padding:52px 20px 34px;
+}
+#apple-portfolio .ap-kicker {
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:2px;
+  color:#ababba;
+}
+#apple-portfolio h1 {
+  font-size:clamp(66px,10vw,110px);
+  line-height:.98;
+  letter-spacing:-6px;
+  font-weight:600;
+  margin:18px auto 20px;
+}
+#apple-portfolio h1 span {
+  background:linear-gradient(100deg,#9bbcff 12%,#d3b4fa 47%,#f7a7b0 90%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+#apple-portfolio .ap-hero-sub {
+  font-size:23px;
+  letter-spacing:-.55px;
+  color:#c0c0c9;
+}
+#apple-portfolio .ap-hero-actions {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:26px;
+  margin-top:25px;
+}
+#apple-portfolio .ap-hero .ap-text-link {
+  color:#66aaff;
+  font-size:15px;
+}
+#apple-portfolio .ap-chip-stage {
+  position:relative;
+  height:342px;
+  max-width:700px;
+  width:100%;
+  margin:8px auto 0;
+  perspective:1000px;
+}
+#apple-portfolio .ap-stage-glow {
+  position:absolute;
+  inset:25% 10% 0;
+  background:radial-gradient(ellipse,#294dd777,transparent 67%);
+  filter:blur(18px);
+}
+#apple-portfolio .ap-chip-shadow {
+  position:absolute;
+  width:300px;
+  height:70px;
+  left:calc(50% - 150px);
+  bottom:37px;
+  background:#3d41c355;
+  filter:blur(30px);
+  border-radius:50%;
+}
+#apple-portfolio .ap-chip-stack {
+  position:absolute;
+  width:245px;
+  height:245px;
+  left:calc(50% - 122.5px);
+  top:43px;
+  transform:rotateX(42deg) rotateZ(-33deg) translateY(var(--ap-chip-y,0px));
+  transform-style:preserve-3d;
+  transition:transform 1.2s cubic-bezier(.2,.7,.2,1);
+}
+#apple-portfolio .ap-chip-layer {
+  position:absolute;
+  inset:0;
+  border-radius:36px;
+  border:1px solid #c8c8e688;
+  transform-style:preserve-3d;
+}
+#apple-portfolio .ap-chip-bottom {
+  transform:translateZ(-36px);
+  background:linear-gradient(135deg,#232b53,#171a39);
+  box-shadow:-3px 4px 0 #656ca6,-5px 7px 0 #171b35,0 0 35px #695af47a;
+}
+#apple-portfolio .ap-chip-middle {
+  transform:translateZ(-17px);
+  background:linear-gradient(135deg,#71738a,#151720);
+  box-shadow:-2px 3px 0 #c9c8e4,-5px 7px 0 #323344;
+}
+#apple-portfolio .ap-chip-front {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:14px;
+  background:radial-gradient(ellipse at 20% 0,#f3f3fa77,transparent 65%),linear-gradient(145deg,#9fa0b0,#3c3e4c 45%,#727586);
+  box-shadow:inset 0 1px 2px #ffffffc9,inset 0 0 20px #ffffff16,-2px 3px 0 #d6d7e3,-5px 8px 0 #444653,0 0 0 2px #191b25,0 0 25px #9275ee55;
+  color:#f5f5ff;
+}
+#apple-portfolio .ap-chip-front:after {
+  content:'';
+  position:absolute;
+  inset:9px;
+  border:1px solid #ffffff26;
+  border-radius:28px;
+  pointer-events:none;
+}
+#apple-portfolio .ap-chip-tiny {
+  font-size:8px;
+  letter-spacing:2.5px;
+  color:#ededf7cc;
+}
+#apple-portfolio .ap-chip-front strong {
+  font-size:58px;
+  font-weight:600;
+  letter-spacing:-4px;
+  text-shadow:0 2px 1px #ffffff44,0 -1px 1px #14151dcc;
+}
+#apple-portfolio .ap-chip-sub {
+  font-size:9px;
+  letter-spacing:.3px;
+}
+#apple-portfolio .ap-chip-line {
+  width:74px;
+  height:2px;
+  background:linear-gradient(90deg,#7aaaff,#e8b4ff);
+  box-shadow:0 0 12px #ba9cff;
+}
+#apple-portfolio .ap-art-label {
+  position:absolute;
+  bottom:3px;
+  left:0;
+  right:0;
+  font-size:11px;
+  color:#8e8e99;
+}
+#apple-portfolio .ap-chip-picker {
+  display:inline-flex;
+  background:#202024;
+  border:1px solid #3a3a40;
+  padding:4px;
+  gap:3px;
+  border-radius:30px;
+  margin-top:17px;
+}
+#apple-portfolio .ap-chip-picker button {
+  padding:8px 19px;
+  border-radius:22px;
+  font-size:12px;
+  color:#b6b6c0;
+  transition:background .25s,color .25s;
+}
+#apple-portfolio .ap-chip-picker button[aria-pressed="true"] {
+  color:#fff;
+  background:#45454e;
+}
+#apple-portfolio .ap-capability-detail {
+  font-size:12px;
+  color:#a1a1aa;
+  min-height:35px;
+  margin:12px auto 0;
+  max-width:90%;
+}
+#apple-portfolio .ap-section-kicker {
+  font-size:15px;
+  font-weight:600;
+  letter-spacing:-.2px;
+  color:var(--ap-muted);
+  margin-bottom:22px;
+}
+#apple-portfolio .ap-intro {
+  padding:100px 0 108px;
+}
+#apple-portfolio .ap-intro h2 {
+  font-size:clamp(38px,6.4vw,65px);
+  letter-spacing:-2.7px;
+  line-height:1.06;
+  font-weight:600;
+}
+#apple-portfolio .ap-intro h2 span {
+  color:var(--ap-muted);
+}
+#apple-portfolio .ap-intro>p:last-child {
+  font-size:21px;
+  line-height:1.5;
+  letter-spacing:-.4px;
+  color:var(--ap-muted);
+  max-width:650px;
+  margin:28px 0 0;
+}
+#apple-portfolio .ap-work {
+  background:var(--ap-section);
+  padding:75px 0 40px;
+  overflow:hidden;
+}
+#apple-portfolio .ap-section-heading h2 {
+  font-size:clamp(34px,4.8vw,49px);
+  font-weight:600;
+  letter-spacing:-1.9px;
+  line-height:1.1;
+}
+#apple-portfolio .ap-section-heading p {
+  font-size:17px;
+  color:var(--ap-muted);
+  margin-top:15px;
+}
+#apple-portfolio .ap-gallery-wrap {
+  margin-top:36px;
+}
+#apple-portfolio .ap-gallery {
+  display:flex;
+  gap:20px;
+  overflow:auto;
+  padding:10px 7% 25px;
+  scrollbar-width:none;
+  scroll-snap-type:x mandatory;
+  overscroll-behavior-x:contain;
+}
+#apple-portfolio .ap-feature {
+  position:relative;
+  min-width:290px;
+  width:31%;
+  max-width:345px;
+  min-height:380px;
+  flex-shrink:0;
+  background:var(--ap-card);
+  border-radius:26px;
+  padding:28px;
+  text-align:left;
+  scroll-snap-align:center;
+  overflow:hidden;
+  transition:transform .4s;
+}
+#apple-portfolio .ap-feature:hover {
+  transform:scale(1.018);
+}
+#apple-portfolio .ap-feature.ap-feature-dark {
+  background:#111115;
+  color:#f5f5f7;
+}
+#apple-portfolio .ap-feature-kicker {
+  font-size:11px;
+  font-weight:500;
+  display:block;
+  color:var(--ap-muted);
+  margin-bottom:13px;
+}
+#apple-portfolio .ap-feature-dark .ap-feature-kicker {
+  color:#a3a3ad;
+}
+#apple-portfolio .ap-feature strong {
+  display:block;
+  font-size:26px;
+  line-height:1.14;
+  letter-spacing:-.9px;
+  font-weight:600;
+  max-width:240px;
+}
+#apple-portfolio .ap-feature-copy {
+  display:block;
+  font-size:13px;
+  line-height:1.6;
+  color:var(--ap-muted);
+  margin-top:15px;
+  max-width:245px;
+}
+#apple-portfolio .ap-feature-dark .ap-feature-copy {
+  color:#acacb8;
+}
+#apple-portfolio .ap-feature-art {
+  position:absolute;
+  bottom:35px;
+  left:28px;
+  right:28px;
+  height:105px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:13px;
+}
+#apple-portfolio .ap-code-art {
+  font:500 88px/1 ui-monospace,monospace;
+  letter-spacing:-14px;
+  background:linear-gradient(140deg,#9baeff,#d3abec);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+  padding-right:10px;
+}
+#apple-portfolio .ap-flow-art span {
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  background:linear-gradient(145deg,#e3ebff,#adc8ed);
+  box-shadow:0 8px 15px #5981ba17;
+  border:1px solid #fff8;
+}
+#apple-portfolio .ap-flow-art b {
+  width:15px;
+  height:1px;
+  background:#a8b3c2;
+}
+#apple-portfolio .ap-data-art span {
+  width:47px;
+  border-radius:8px 8px 0 0;
+  background:linear-gradient(#adc4f9,#687cd9);
+  height:45px;
+}
+#apple-portfolio .ap-data-art span:nth-child(2) {
+  height:80px;
+}
+#apple-portfolio .ap-data-art span:nth-child(3) {
+  height:60px;
+}
+#apple-portfolio .ap-plus {
+  position:absolute;
+  right:20px;
+  bottom:18px;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--ap-ink);
+  color:var(--ap-page);
+  font-size:21px;
+  font-weight:400;
+}
+#apple-portfolio .ap-feature-dark .ap-plus {
+  background:#e0e0e5;
+  color:#1d1d1f;
+}
+#apple-portfolio .ap-gallery-footer {
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+  margin-top:10px;
+  color:var(--ap-muted);
+  font-size:11px;
+}
+#apple-portfolio .ap-gallery-footer>div {
+  display:flex;
+  gap:10px;
+}
+#apple-portfolio .ap-circle {
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:light-dark(#e5e5e9,#343439);
+  color:var(--ap-ink);
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+}
+#apple-portfolio .ap-circle:disabled {
+  opacity:.3;
+}
+#apple-portfolio .ap-product {
+  padding:100px 0 85px;
+  text-align:center;
+}
+#apple-portfolio .ap-product h2 {
+  font-size:clamp(47px,7vw,76px);
+  line-height:1.04;
+  letter-spacing:-3.4px;
+  font-weight:600;
+}
+#apple-portfolio .ap-product h2 span {
+  color:var(--ap-muted);
+}
+#apple-portfolio .ap-product-lead {
+  font-size:19px;
+  line-height:1.5;
+  letter-spacing:-.3px;
+  color:var(--ap-muted);
+  margin-top:25px;
+}
+#apple-portfolio .ap-product>.ap-text-link {
+  margin-top:16px;
+}
+#apple-portfolio .ap-product-visual {
+  margin-top:40px;
+  background:var(--ap-section);
+  border-radius:28px;
+  padding:28px 7% 34px;
+}
+#apple-portfolio .ap-product-tabs {
+  display:inline-flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:4px;
+  padding:5px;
+  background:light-dark(#e5e5ea,#303034);
+  border-radius:25px;
+  margin:0 auto 30px;
+}
+#apple-portfolio .ap-product-tabs button {
+  font-size:11px;
+  padding:9px 14px;
+  border-radius:20px;
+  color:var(--ap-muted);
+}
+#apple-portfolio .ap-product-tabs button[aria-pressed="true"] {
+  background:var(--ap-card);
+  color:var(--ap-ink);
+  box-shadow:0 2px 6px #0000000b;
+}
+#apple-portfolio .ap-product-model {
+  background:var(--ap-card);
+  border:1px solid var(--ap-line);
+  border-radius:17px;
+  box-shadow:0 18px 40px #00000008;
+  text-align:left;
+}
+#apple-portfolio .ap-product-model-label {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 21px;
+  border-bottom:1px solid var(--ap-line);
+}
+#apple-portfolio .ap-product-model-label>span:first-child {
+  font-size:24px;
+  font-weight:600;
+  letter-spacing:-1.4px;
+}
+#apple-portfolio .ap-product-model-label>span:nth-child(2) {
+  font:9px ui-monospace,monospace;
+  letter-spacing:1.4px;
+  color:var(--ap-muted);
+}
+#apple-portfolio .ap-product-journey {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+  gap:12px;
+  min-height:140px;
+}
+#apple-portfolio .ap-journey-step {
+  flex:1;
+  max-width:95px;
+  text-align:center;
+}
+#apple-portfolio .ap-step-symbol {
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  margin:0 auto 12px;
+  border-radius:13px;
+  background:linear-gradient(135deg,#cfe1ff,#eee2fa);
+  color:#5265a4;
+}
+#apple-portfolio .ap-step-symbol svg {
+  width:20px;
+  height:20px;
+}
+#apple-portfolio .ap-journey-step>span:last-child {
+  display:block;
+  font-size:11px;
+  color:var(--ap-muted);
+}
+#apple-portfolio .ap-journey-arrow {
+  font-size:17px;
+  color:var(--ap-muted);
+  margin-top:-25px;
+}
+#apple-portfolio .ap-model-bottom {
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  padding:13px 21px;
+  border-top:1px solid var(--ap-line);
+  font-size:10px;
+  color:var(--ap-muted);
+}
+#apple-portfolio .ap-product-caption {
+  max-width:530px;
+  margin:30px auto 0;
+}
+#apple-portfolio .ap-product-caption h3 {
+  font-size:23px;
+  letter-spacing:-.7px;
+  font-weight:600;
+}
+#apple-portfolio .ap-product-caption p {
+  font-size:14px;
+  line-height:1.6;
+  color:var(--ap-muted);
+  margin-top:11px;
+}
+#apple-portfolio .ap-fine-print {
+  font-size:10px;
+  color:var(--ap-muted);
+  margin:17px auto 0;
+  max-width:570px;
+  line-height:1.6;
+}
+#apple-portfolio .ap-person {
+  background:var(--ap-section);
+  padding:85px 0;
+}
+#apple-portfolio .ap-person h2 {
+  font-size:clamp(48px,7vw,76px);
+  font-weight:600;
+  letter-spacing:-3px;
+  line-height:1.04;
+}
+#apple-portfolio .ap-person h2 span {
+  background:linear-gradient(100deg,#2679d4,#9e5ccd);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+}
+#apple-portfolio .ap-person-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  margin-top:35px;
+  font-size:18px;
+  line-height:1.55;
+  letter-spacing:-.3px;
+  color:var(--ap-muted);
+}
+#apple-portfolio .ap-person-grid>p {
+  color:var(--ap-ink);
+}
+#apple-portfolio .ap-person-grid>div>p {
+  font-size:15px;
+}
+#apple-portfolio .ap-person-grid .ap-text-link {
+  font-size:14px;
+  margin-top:13px;
+}
+#apple-portfolio .ap-contact {
+  text-align:center;
+  padding:80px 0 85px;
+}
+#apple-portfolio .ap-contact-mark {
+  font-size:47px;
+  font-weight:650;
+  letter-spacing:-5px;
+  display:block;
+  margin-bottom:15px;
+}
+#apple-portfolio .ap-contact h2 {
+  font-size:clamp(36px,5vw,55px);
+  line-height:1.08;
+  font-weight:600;
+  letter-spacing:-2px;
+}
+#apple-portfolio .ap-contact h2 span {
+  color:var(--ap-muted);
+}
+#apple-portfolio .ap-contact>.ap-pill {
+  margin-top:28px;
+}
+#apple-portfolio .ap-contact-socials {
+  display:flex;
+  gap:25px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:25px;
+  color:var(--ap-blue);
+  font-size:12px;
+}
+#apple-portfolio .ap-footer {
+  background:var(--ap-section);
+  padding:25px 0;
+  color:var(--ap-muted);
+  font-size:10px;
+  line-height:1.6;
+}
+#apple-portfolio .ap-footer p {
+  padding-bottom:15px;
+  border-bottom:1px solid var(--ap-line);
+}
+#apple-portfolio .ap-footer .ap-content>div {
+  padding-top:15px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+#apple-portfolio .ap-modal {
+  position:absolute;
+  inset:45px 0 0;
+  z-index:30;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+#apple-portfolio .ap-modal-scrim {
+  position:absolute;
+  inset:0;
+  background:#0009;
+  backdrop-filter:blur(10px);
+}
+#apple-portfolio .ap-modal-sheet {
+  position:relative;
+  max-width:600px;
+  width:100%;
+  max-height:700px;
+  overflow:auto;
+  overscroll-behavior:contain;
+  background:var(--ap-page);
+  border-radius:26px;
+  padding:48px 45px;
+  box-shadow:0 20px 90px #0004;
+}
+#apple-portfolio .ap-modal-close {
+  position:absolute;
+  right:17px;
+  top:17px;
+}
+#apple-portfolio .ap-modal-content>p:first-child {
+  color:var(--ap-muted);
+  font-size:12px;
+  font-weight:500;
+  margin-bottom:17px;
+}
+#apple-portfolio .ap-modal-content h2 {
+  font-size:39px;
+  line-height:1.08;
+  letter-spacing:-1.6px;
+  font-weight:600;
+  margin-bottom:28px;
+}
+#apple-portfolio .ap-modal-content h3 {
+  font-size:17px;
+  font-weight:600;
+  margin:25px 0 10px;
+}
+#apple-portfolio .ap-modal-content p,#apple-portfolio .ap-modal-content li {
+  color:var(--ap-muted);
+  font-size:15px;
+  line-height:1.65;
+}
+#apple-portfolio .ap-modal-content ol {
+  padding-left:20px;
+  display:grid;
+  gap:9px;
+  margin:0;
+}
+#apple-portfolio .ap-modal-content .ap-modal-outcome {
+  padding:20px;
+  background:var(--ap-section);
+  border-radius:15px;
+  margin-top:20px;
+}
+#apple-portfolio .ap-modal-outcome h3 {
+  margin:0 0 8px;
+}
+#apple-portfolio .ap-modal-content .ap-modal-foot {
+  font-size:11px;
+  border-top:1px solid var(--ap-line);
+  padding-top:18px;
+  margin-top:25px;
+}
+@media(max-width:650px) {
+  #apple-portfolio .ap-global {
+    padding-left:6%;
+    gap:18px;
+  }
+  #apple-portfolio .ap-global nav {
+    gap:18px;
+    font-size:10px;
+  }
+  #apple-portfolio .ap-global-mail {
+    display:none;
+  }
+  #apple-portfolio .ap-local {
+    padding:0 5%;
+    height:56px;
+  }
+  #apple-portfolio .ap-local-title {
+    font-size:16px;
+  }
+  #apple-portfolio .ap-local>div {
+    gap:16px;
+  }
+  #apple-portfolio .ap-local-overview {
+    display:none;
+  }
+  #apple-portfolio .ap-scroll {
+    height:760px;
+  }
+  #apple-portfolio .ap-hero {
+    padding:43px 16px 30px;
+  }
+  #apple-portfolio .ap-kicker {
+    font-size:8px;
+    letter-spacing:1.2px;
+  }
+  #apple-portfolio h1 {
+    letter-spacing:-4px;
+    font-size:clamp(61px,11.8vw,76px);
+  }
+  #apple-portfolio .ap-hero-sub {
+    font-size:18px;
+  }
+  #apple-portfolio .ap-hero-actions {
+    gap:18px;
+  }
+  #apple-portfolio .ap-pill {
+    font-size:13px;
+    padding:11px 19px;
+  }
+  #apple-portfolio .ap-hero .ap-text-link {
+    font-size:13px;
+  }
+  #apple-portfolio .ap-chip-stage {
+    height:305px;
+  }
+  #apple-portfolio .ap-chip-stack {
+    width:215px;
+    height:215px;
+    left:calc(50% - 107.5px);
+    top:43px;
+  }
+  #apple-portfolio .ap-chip-front strong {
+    font-size:49px;
+  }
+  #apple-portfolio .ap-intro {
+    padding-block:65px;
+  }
+  #apple-portfolio .ap-intro h2 {
+    font-size:40px;
+    letter-spacing:-1.7px;
+  }
+  #apple-portfolio .ap-intro>p:last-child {
+    font-size:18px;
+  }
+  #apple-portfolio .ap-section-kicker {
+    font-size:13px;
+  }
+  #apple-portfolio .ap-work {
+    padding-top:55px;
+  }
+  #apple-portfolio .ap-feature {
+    min-width:270px;
+    min-height:370px;
+  }
+  #apple-portfolio .ap-gallery {
+    gap:15px;
+  }
+  #apple-portfolio .ap-gallery-footer>span {
+    max-width:200px;
+    font-size:10px;
+  }
+  #apple-portfolio .ap-product {
+    padding-block:65px;
+  }
+  #apple-portfolio .ap-product h2 {
+    font-size:49px;
+    letter-spacing:-2px;
+  }
+  #apple-portfolio .ap-product-lead {
+    font-size:17px;
+  }
+  #apple-portfolio .ap-product-visual {
+    padding:21px 14px 25px;
+    border-radius:22px;
+  }
+  #apple-portfolio .ap-product-tabs {
+    width:100%;
+    gap:2px;
+  }
+  #apple-portfolio .ap-product-tabs button {
+    font-size:10px;
+    padding:9px 9px;
+  }
+  #apple-portfolio .ap-product-model-label {
+    padding:13px;
+  }
+  #apple-portfolio .ap-product-model-label>span:nth-child(2) {
+    font-size:7px;
+    letter-spacing:1px;
+  }
+  #apple-portfolio .ap-product-journey {
+    padding:28px 10px;
+    gap:6px;
+  }
+  #apple-portfolio .ap-step-symbol {
+    width:35px;
+    height:35px;
+    border-radius:10px;
+  }
+  #apple-portfolio .ap-step-symbol svg {
+    width:16px;
+    height:16px;
+  }
+  #apple-portfolio .ap-journey-step>span:last-child {
+    font-size:9px;
+  }
+  #apple-portfolio .ap-journey-arrow {
+    font-size:13px;
+  }
+  #apple-portfolio .ap-model-bottom {
+    padding:12px;
+    font-size:8px;
+  }
+  #apple-portfolio .ap-product-caption h3 {
+    font-size:21px;
+  }
+  #apple-portfolio .ap-product-caption p {
+    font-size:13px;
+  }
+  #apple-portfolio .ap-person {
+    padding-block:65px;
+  }
+  #apple-portfolio .ap-person-grid {
+    grid-template-columns:1fr;
+    gap:24px;
+    font-size:19px;
+  }
+  #apple-portfolio .ap-contact {
+    padding-block:65px;
+  }
+  #apple-portfolio .ap-footer .ap-content>div {
+    flex-wrap:wrap;
+  }
+  #apple-portfolio .ap-modal {
+    padding:12px;
+  }
+  #apple-portfolio .ap-modal-sheet {
+    padding:55px 25px 30px;
+    max-height:690px;
+  }
+  #apple-portfolio .ap-modal-content h2 {
+    font-size:32px;
+  }
+  #apple-portfolio .ap-modal-content p,#apple-portfolio .ap-modal-content li {
+    font-size:14px;
+  }
+}
+#apple-portfolio .ap-global nav>* {
+  white-space:nowrap;
+}
+@media(max-width:520px) {
+  #apple-portfolio .ap-global nav>a {
+    display:none;
+  }
+  #apple-portfolio .ap-global {
+    gap:14px;
+  }
+  #apple-portfolio .ap-global nav {
+    gap:14px;
+  }
+}
+@media(max-width:360px) {
+  #apple-portfolio .ap-global nav {
+    gap:14px;
+    font-size:9px;
+  }
+  #apple-portfolio .ap-local-title {
+    font-size:14px;
+  }
+  #apple-portfolio .ap-local-work {
+    display:none;
+  }
+  #apple-portfolio h1 {
+    font-size:59px;
+    letter-spacing:-3.5px;
+  }
+  #apple-portfolio .ap-hero-actions {
+    gap:12px;
+  }
+  #apple-portfolio .ap-hero-sub {
+    font-size:16px;
+  }
+  #apple-portfolio .ap-chip-picker button {
+    padding:8px 16px;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  #apple-portfolio .ap-scroll {
+    scroll-behavior:auto;
+  }
+  #apple-portfolio .ap-chip-stack,#apple-portfolio .ap-feature,#apple-portfolio .ap-pill {
+    transition:none;
+  }
+}
+@media(pointer:coarse) {
+  #apple-portfolio .ap-chip-picker button,#apple-portfolio .ap-product-tabs button,#apple-portfolio .ap-global nav a,#apple-portfolio .ap-global nav button {
+    min-height:44px;
+  }
+  #apple-portfolio .ap-circle {
+    width:44px;
+    height:44px;
+  }
+}
+/* Scroll sequences stay tied to native scrolling: reverse scroll reverses time. */
+#apple-portfolio .ap-local:after {
+  content:'';
+  position:absolute;
+  bottom:-1px;
+  left:0;
+  height:2px;
+  width:var(--ap-read-progress,0%);
+  background:linear-gradient(90deg,#789cfa,#c99fe8);
+  pointer-events:none;
+}
+#apple-portfolio .ap-scroll-story,#apple-portfolio .ap-scroll-cue {
+  display:none;
+}
+#apple-portfolio.ap-effects .ap-hero {
+  padding:0;
+  overflow:clip;
+}
+#apple-portfolio.ap-effects .ap-hero-pin {
+  position:sticky;
+  top:58px;
+  height:var(--ap-pin-height,752px);
+  overflow:clip;
+  isolation:isolate;
+}
+#apple-portfolio.ap-effects .ap-hero-copy {
+  position:absolute;
+  left:15px;
+  right:15px;
+  top:38px;
+  transform-origin:50% 20%;
+  will-change:transform,opacity;
+  z-index:3;
+}
+#apple-portfolio.ap-effects h1 {
+  font-size:clamp(60px,9vw,88px);
+  margin:15px auto 16px;
+  letter-spacing:-4.8px;
+}
+#apple-portfolio.ap-effects .ap-hero-sub {
+  font-size:21px;
+}
+#apple-portfolio.ap-effects .ap-hero-actions {
+  margin-top:21px;
+}
+#apple-portfolio.ap-effects .ap-chip-stage {
+  position:absolute;
+  left:0;
+  right:0;
+  top:calc(var(--ap-pin-height,752px) * .44);
+  height:310px;
+  margin:0 auto;
+  will-change:transform;
+}
+#apple-portfolio.ap-effects .ap-chip-stack {
+  transition:none;
+  will-change:transform;
+}
+#apple-portfolio.ap-effects .ap-chip-layer {
+  will-change:transform;
+}
+#apple-portfolio.ap-effects .ap-art-label {
+  opacity:0;
+}
+#apple-portfolio.ap-effects .ap-chip-picker {
+  position:absolute;
+  bottom:57px;
+  left:50%;
+  transform:translateX(-50%);
+  margin:0;
+  z-index:4;
+}
+#apple-portfolio.ap-effects .ap-capability-detail {
+  position:absolute;
+  left:5%;
+  right:5%;
+  bottom:13px;
+  min-height:26px;
+  margin:0 auto;
+  z-index:4;
+}
+#apple-portfolio.ap-effects .ap-scroll-story {
+  display:block;
+  position:absolute;
+  left:6%;
+  right:6%;
+  top:53px;
+  text-align:center;
+  z-index:2;
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(25px);
+}
+#apple-portfolio .ap-scroll-story>span {
+  font-size:11px;
+  letter-spacing:1.6px;
+  color:#92929f;
+  text-transform:uppercase;
+}
+#apple-portfolio .ap-scroll-story h2 {
+  font-size:clamp(32px,5vw,52px);
+  line-height:1.1;
+  letter-spacing:-2px;
+  font-weight:600;
+  margin:14px auto 0;
+  max-width:650px;
+  color:#f5f5f7;
+}
+#apple-portfolio .ap-scroll-story h2 span {
+  color:#a8a8b5;
+}
+#apple-portfolio.ap-effects .ap-scroll-cue {
+  display:block;
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:2px;
+  font-size:9px;
+  letter-spacing:1px;
+  color:#777786;
+  pointer-events:none;
+}
+#apple-portfolio.ap-effects .ap-work {
+  padding:0;
+  overflow:clip;
+}
+#apple-portfolio.ap-effects .ap-work-pin {
+  position:sticky;
+  top:58px;
+  height:var(--ap-pin-height,752px);
+  padding-top:48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  overflow:hidden;
+}
+#apple-portfolio.ap-effects .ap-gallery {
+  scroll-snap-type:none;
+  scroll-behavior:auto;
+  padding-top:15px;
+}
+#apple-portfolio.ap-effects .ap-gallery-wrap {
+  margin-top:27px;
+}
+#apple-portfolio.ap-effects .ap-feature {
+  min-height:350px;
+}
+#apple-portfolio .ap-feature {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+#apple-portfolio.ap-effects .ap-gallery-footer {
+  padding-bottom:24px;
+}
+#apple-portfolio.ap-effects .ap-read-word {
+  opacity:.22;
+}
+#apple-portfolio.ap-effects .ap-product-model {
+  transform-origin:50% 90%;
+  will-change:transform;
+}
+@media(max-width:650px) {
+  #apple-portfolio.ap-effects .ap-hero-pin,#apple-portfolio.ap-effects .ap-work-pin {
+    top:56px;
+  }
+  #apple-portfolio.ap-effects .ap-hero-copy {
+    top:34px;
+  }
+  #apple-portfolio.ap-effects h1 {
+    font-size:clamp(58px,11.8vw,76px);
+    letter-spacing:-3.5px;
+  }
+  #apple-portfolio.ap-effects .ap-hero-sub {
+    font-size:17px;
+  }
+  #apple-portfolio.ap-effects .ap-chip-stage {
+    top:calc(var(--ap-pin-height,704px) * .42);
+    height:280px;
+  }
+  #apple-portfolio.ap-effects .ap-chip-stack {
+    width:205px;
+    height:205px;
+    left:calc(50% - 102.5px);
+    top:40px;
+  }
+  #apple-portfolio .ap-scroll-story {
+    top:55px;
+  }
+  #apple-portfolio .ap-scroll-story h2 {
+    font-size:32px;
+    letter-spacing:-1.1px;
+  }
+  #apple-portfolio.ap-effects .ap-work-pin {
+    padding-top:25px;
+  }
+  #apple-portfolio.ap-effects .ap-feature {
+    min-height:345px;
+  }
+  #apple-portfolio.ap-effects .ap-gallery-footer {
+    padding-bottom:20px;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  #apple-portfolio .ap-read-word {
+    opacity:1!important;
+  }
+}
+/* Cinematic revision: a continuous camera move rather than separate entrances. */
+#apple-portfolio .ap-liquid-canvas {
+  display:none;
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:1;
+}
+#apple-portfolio.ap-effects.ap-gpu .ap-liquid-canvas {
+  display:block;
+}
+#apple-portfolio.ap-effects.ap-gpu .ap-chip-stage {
+  visibility:hidden;
+}
+#apple-portfolio.ap-effects .ap-hero-copy {
+  top:92px;
+  left:7%;
+  right:auto;
+  width:62%;
+  text-align:left;
+}
+#apple-portfolio.ap-effects h1 {
+  font-size:clamp(74px,10vw,112px);
+  letter-spacing:-6px;
+  line-height:.97;
+}
+#apple-portfolio.ap-effects .ap-hero-sub {
+  font-size:20px;
+  max-width:380px;
+  line-height:1.4;
+}
+#apple-portfolio.ap-effects .ap-hero-actions {
+  justify-content:flex-start;
+}
+#apple-portfolio.ap-effects .ap-kicker {
+  font-size:9px;
+  letter-spacing:1.6px;
+  max-width:310px;
+  line-height:1.6;
+}
+#apple-portfolio.ap-effects .ap-scroll-story {
+  top:120px;
+  left:7%;
+  right:auto;
+  width:53%;
+  text-align:left;
+  z-index:3;
+}
+#apple-portfolio .ap-scroll-story h2 {
+  font-size:clamp(42px,6.3vw,68px);
+  letter-spacing:-3px;
+  line-height:1.03;
+  margin-top:18px;
+}
+#apple-portfolio .ap-film-description {
+  font-size:15px;
+  color:#a4a4b2;
+  max-width:300px;
+  line-height:1.65;
+  margin-top:24px;
+}
+#apple-portfolio .ap-connect-word {
+  display:none;
+}
+#apple-portfolio.ap-effects .ap-connect-word {
+  display:block;
+  position:absolute;
+  left:0;
+  right:0;
+  top:37%;
+  text-align:center;
+  font-size:clamp(61px,13.5vw,144px);
+  line-height:1;
+  font-weight:600;
+  letter-spacing:-.065em;
+  color:#f5f5f7;
+  z-index:3;
+  opacity:0;
+  pointer-events:none;
+  transform-origin:center;
+  will-change:transform,opacity;
+  text-shadow:0 4px 35px #08081666;
+}
+#apple-portfolio .ap-iris {
+  display:none;
+}
+#apple-portfolio.ap-effects .ap-iris {
+  display:block;
+  position:absolute;
+  inset:-2px;
+  background:#f5f5f7;
+  clip-path:circle(0% at 50% 50%);
+  z-index:5;
+  pointer-events:none;
+  will-change:clip-path;
+}
+#apple-portfolio .ap-iris-copy {
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  padding:35px;
+  text-align:center;
+  color:#1d1d1f;
+}
+#apple-portfolio .ap-iris-copy>span {
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:1.8px;
+  color:#6e6e73;
+}
+#apple-portfolio .ap-iris-copy h2 {
+  font-size:clamp(45px,7.5vw,79px);
+  letter-spacing:-.055em;
+  line-height:1.04;
+  font-weight:600;
+}
+#apple-portfolio .ap-film-timeline {
+  display:none;
+}
+#apple-portfolio.ap-effects .ap-film-timeline {
+  display:flex;
+  position:absolute;
+  bottom:30px;
+  left:7%;
+  gap:19px;
+  z-index:6;
+  pointer-events:none;
+}
+#apple-portfolio .ap-film-timeline span {
+  font:9px/1.6 ui-monospace,monospace;
+  letter-spacing:1px;
+  color:#81818e;
+  border-top:1px solid #ffffff25;
+  padding-top:9px;
+  min-width:75px;
+}
+#apple-portfolio .ap-film-timeline span.ap-active-act {
+  color:#f5f5f7;
+  border-color:#c5b6ff;
+}
+#apple-portfolio.ap-effects .ap-chip-picker {
+  bottom:40px;
+  left:auto;
+  right:6%;
+  transform:none;
+}
+#apple-portfolio.ap-effects .ap-capability-detail {
+  bottom:5px;
+  left:auto;
+  right:6%;
+  font-size:10px;
+  max-width:300px;
+  text-align:right;
+}
+#apple-portfolio.ap-effects .ap-scroll-cue {
+  bottom:8px;
+  left:7%;
+  right:auto;
+  font-size:8px;
+}
+#apple-portfolio .ap-local.ap-film-nav {
+  background:#101014f2;
+  color:#f5f5f7;
+  border-color:#ffffff20;
+}
+#apple-portfolio .ap-intro {
+  width:100%;
+  max-width:none;
+  background:#f5f5f7;
+  color:#1d1d1f;
+  padding:110px 7%;
+  position:relative;
+  overflow:hidden;
+}
+#apple-portfolio .ap-intro .ap-section-kicker,#apple-portfolio .ap-intro h2 span,#apple-portfolio .ap-intro>p:last-child {
+  color:#6e6e73;
+}
+#apple-portfolio .ap-intro h2 {
+  font-size:clamp(45px,7.5vw,79px);
+  letter-spacing:-3.5px;
+  max-width:900px;
+}
+#apple-portfolio .ap-intro>p:last-child {
+  max-width:700px;
+  font-size:23px;
+  line-height:1.5;
+}
+#apple-portfolio .ap-gallery {
+  perspective:1200px;
+}
+#apple-portfolio.ap-effects .ap-feature {
+  transform-origin:50% 60%;
+  will-change:transform;
+  transition:none;
+}
+#apple-portfolio.ap-effects .ap-product-model {
+  box-shadow:0 32px 70px #00000018;
+}
+@media(max-width:650px) {
+  #apple-portfolio.ap-effects .ap-hero-copy {
+    left:5%;
+    right:5%;
+    top:44px;
+    width:90%;
+    text-align:center;
+  }
+  #apple-portfolio.ap-effects h1 {
+    font-size:clamp(60px,12.5vw,80px);
+    letter-spacing:-4px;
+  }
+  #apple-portfolio.ap-effects .ap-kicker {
+    margin-inline:auto;
+    font-size:8px;
+    max-width:260px;
+  }
+  #apple-portfolio.ap-effects .ap-hero-sub {
+    font-size:17px;
+    margin-inline:auto;
+    max-width:280px;
+  }
+  #apple-portfolio.ap-effects .ap-hero-actions {
+    justify-content:center;
+    gap:17px;
+    margin-top:20px;
+  }
+  #apple-portfolio.ap-effects .ap-scroll-story {
+    top:48px;
+    left:7%;
+    right:7%;
+    width:auto;
+    text-align:center;
+  }
+  #apple-portfolio .ap-scroll-story h2 {
+    font-size:41px;
+    letter-spacing:-1.8px;
+    max-width:400px;
+    margin:14px auto 0;
+  }
+  #apple-portfolio .ap-film-description {
+    font-size:13px;
+    max-width:280px;
+    margin:18px auto 0;
+  }
+  #apple-portfolio.ap-effects .ap-connect-word {
+    top:41%;
+    font-size:clamp(59px,15vw,87px);
+  }
+  #apple-portfolio.ap-effects .ap-film-timeline {
+    left:7%;
+    right:7%;
+    justify-content:center;
+    gap:17px;
+    bottom:31px;
+  }
+  #apple-portfolio .ap-film-timeline span {
+    min-width:68px;
+    font-size:8px;
+  }
+  #apple-portfolio.ap-effects .ap-chip-picker {
+    bottom:92px;
+    left:50%;
+    right:auto;
+    transform:translateX(-50%);
+  }
+  #apple-portfolio.ap-effects .ap-capability-detail {
+    bottom:62px;
+    left:5%;
+    right:5%;
+    max-width:none;
+    text-align:center;
+    font-size:9px;
+  }
+  #apple-portfolio.ap-effects .ap-scroll-cue {
+    bottom:8px;
+    left:0;
+    right:0;
+  }
+  #apple-portfolio .ap-intro {
+    padding:75px 7%;
+  }
+  #apple-portfolio .ap-intro h2 {
+    font-size:44px;
+    letter-spacing:-2px;
+  }
+  #apple-portfolio .ap-intro>p:last-child {
+    font-size:18px;
+  }
+}
+/* Full-page integration: native document scrolling replaces the preview frame. */
+:root {
+  color-scheme:light dark;
+}
+:root[data-theme="light"] {
+  color-scheme:light;
+}
+:root[data-theme="dark"] {
+  color-scheme:dark;
+}
+html {
+  scroll-behavior:auto;
+  scroll-padding-top:76px;
+}
+body {
+  margin:0;
+  min-width:320px;
+  background:light-dark(#fff,#101010);
+}
+#apple-portfolio .ap-scroll {
+  height:auto!important;
+  overflow:visible!important;
+  scroll-behavior:auto;
+}
+#apple-portfolio .ap-global {
+  padding:0 6%;
+}
+#apple-portfolio .theme-toggle {
+  display:grid;
+  place-items:center;
+  width:30px;
+  height:30px;
+  flex-shrink:0;
+  padding:0;
+  border:1px solid var(--ap-line);
+  border-radius:50%;
+  background:var(--ap-card);
+  font-size:18px;
+}
+#apple-portfolio .theme-toggle .moon,:root[data-theme="dark"] #apple-portfolio .theme-toggle .sun {
+  display:none;
+}
+:root[data-theme="dark"] #apple-portfolio .theme-toggle .moon {
+  display:inline;
+}
+#apple-portfolio .ap-modal {
+  position:fixed;
+  inset:0;
+  z-index:100;
+  padding:20px;
+}
+#apple-portfolio .ap-modal-sheet {
+  max-height:min(90dvh,800px);
+}
+#apple-portfolio .ap-contact-form {
+  width:min(100%,650px);
+  margin:40px auto 0;
+  text-align:left;
+  padding:30px;
+  background:var(--ap-section);
+  border-radius:24px;
+}
+#apple-portfolio .ap-contact-form .form-row {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+#apple-portfolio .ap-contact-form label {
+  display:block;
+  font-size:13px;
+  margin-bottom:20px;
+  color:var(--ap-ink);
+}
+#apple-portfolio .ap-contact-form input,#apple-portfolio .ap-contact-form textarea {
+  display:block;
+  width:100%;
+  border:1px solid var(--ap-line);
+  border-radius:12px;
+  padding:13px;
+  margin-top:8px;
+  background:var(--ap-card);
+  color:var(--ap-ink);
+  font:16px/1.5 -apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;
+}
+#apple-portfolio .ap-contact-form input:focus-visible,#apple-portfolio .ap-contact-form textarea:focus-visible {
+  outline:3px solid #2997ff;
+  outline-offset:3px;
+}
+#apple-portfolio .ap-contact-form textarea {
+  resize:vertical;
+  min-height:120px;
+}
+#apple-portfolio .ap-contact-form .ap-pill:disabled {
+  opacity:.6;
+  cursor:wait;
+}
+#apple-portfolio #form-status {
+  min-height:24px;
+  margin:15px 0 0;
+  font-size:13px;
+  line-height:1.6;
+  color:var(--ap-muted);
+}
+.skip-link {
+  position:fixed;
+  left:15px;
+  top:12px;
+  z-index:200;
+  padding:12px 18px;
+  border-radius:24px;
+  background:#0071e3;
+  color:white;
+  font:14px system-ui;
+  text-decoration:none;
+  transform:translateY(-200%);
+}
+.skip-link:focus {
+  transform:none;
+}
+@media(max-width:650px) {
+  #apple-portfolio .ap-global {
+    gap:18px;
+  }
+  #apple-portfolio .ap-global nav {
+    gap:20px;
+  }
+  #apple-portfolio .ap-contact-form {
+    padding:22px;
+  }
+  #apple-portfolio .ap-contact-form .form-row {
+    grid-template-columns:1fr;
+    gap:0;
+  }
+}
+@media(max-width:360px) {
+  #apple-portfolio .ap-global {
+    gap:12px;
+  }
+  #apple-portfolio .ap-global nav {
+    gap:13px;
+  }
+}
+
+/* Product explorer: product scope and personal contributions stay side by side. */
+#apple-portfolio .ap-product {padding:110px 0 95px;text-align:left;max-width:1100px}
+#apple-portfolio .ap-product-heading {display:grid;grid-template-columns:1.1fr 1fr;gap:65px;align-items:end}
+#apple-portfolio .ap-product-heading h2 {font-size:clamp(44px,5.4vw,73px);letter-spacing:-.065em}
+#apple-portfolio .ap-product-intro {padding-bottom:3px}
+#apple-portfolio .ap-product-wordmark {font-size:27px;letter-spacing:-1.6px;font-weight:600}
+#apple-portfolio .ap-product-wordmark>span {color:var(--ap-blue)}
+#apple-portfolio .ap-product-intro>p {color:var(--ap-muted);font-size:15px;line-height:1.75;margin-top:15px;max-width:410px}
+#apple-portfolio .ap-product-intro .ap-text-link {font-size:14px;margin-top:14px}
+#apple-portfolio .ap-product-visual {margin-top:42px;padding:0;background:none;border-radius:0}
+#apple-portfolio .ap-product-tabs {display:flex;gap:7px;justify-content:flex-start;width:fit-content;max-width:100%;padding:6px;margin:0 0 23px;background:var(--ap-section);border:1px solid color-mix(in srgb,var(--ap-line) 65%,transparent);border-radius:18px}
+#apple-portfolio .ap-product-tabs button {display:flex;gap:8px;align-items:center;padding:11px 17px;border-radius:12px;font-size:12px;min-height:42px}
+#apple-portfolio .ap-product-tabs svg {width:16px;height:16px;flex-shrink:0}
+#apple-portfolio .ap-product-tabs button[aria-pressed="true"] {box-shadow:0 2px 10px #0000000a;background:var(--ap-card)}
+#apple-portfolio .ap-product-model {--module-accent:light-dark(#5274bd,#a8c5ff);--module-soft:light-dark(#e8effc,#283449);--module-glow:light-dark(#c4d4f5,#3d527d);display:grid;grid-template-columns:1fr 1.06fr;gap:40px;padding:35px;border-radius:28px;background:var(--ap-section);border:1px solid color-mix(in srgb,var(--ap-line) 65%,transparent);box-shadow:0 25px 65px #00000008;overflow:hidden}
+#apple-portfolio .ap-product-model[data-module="manufacturing"] {--module-accent:light-dark(#57755d,#adcfb4);--module-soft:light-dark(#e9f0e8,#2b3b30);--module-glow:light-dark(#cadbc6,#3d5942)}
+#apple-portfolio .ap-product-model[data-module="reports"] {--module-accent:light-dark(#7c60ac,#cbb6ed);--module-soft:light-dark(#efeafa,#393047);--module-glow:light-dark(#dccff2,#594574)}
+#apple-portfolio .ap-product-story {padding:11px 0 6px;display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+#apple-portfolio .ap-module-number {font:10px/1.5 ui-monospace,monospace;letter-spacing:1.5px;color:var(--module-accent)}
+#apple-portfolio .ap-module-title {font-size:clamp(29px,3vw,38px);font-weight:600;line-height:1.12;letter-spacing:-1.35px;margin-top:22px;max-width:350px}
+#apple-portfolio .ap-module-summary {font-size:14px;line-height:1.8;color:var(--ap-muted);margin-top:18px;max-width:345px}
+#apple-portfolio .ap-module-features {display:flex;flex-wrap:wrap;list-style:none;padding:0;margin:23px 0 28px;gap:9px 15px;max-width:350px}
+#apple-portfolio .ap-module-features li {display:flex;gap:6px;align-items:center;font-size:11px;line-height:1.6;color:var(--ap-ink)}
+#apple-portfolio .ap-module-features li:before {content:'✓';color:var(--module-accent);font-size:12px}
+#apple-portfolio .ap-product-contribution {margin-top:auto;border-top:1px solid var(--ap-line);padding-top:19px;width:100%}
+#apple-portfolio .ap-product-contribution>span {font:9px ui-monospace,monospace;letter-spacing:1.2px;color:var(--ap-muted)}
+#apple-portfolio .ap-product-contribution>p {margin-top:10px;font-size:12px;line-height:1.8;color:var(--ap-muted)}
+#apple-portfolio .ap-workspace {min-width:0;position:relative;background:var(--ap-card);border:1px solid color-mix(in srgb,var(--ap-line) 75%,transparent);border-top-color:light-dark(#fff,#ffffff24);border-radius:20px;overflow:hidden;box-shadow:0 14px 30px #00000005}
+#apple-portfolio .ap-product-model-label {padding:15px 20px;border-color:color-mix(in srgb,var(--ap-line) 60%,transparent)}
+#apple-portfolio .ap-product-model-label>span:nth-child(2) {font-size:8px;letter-spacing:1.4px}
+#apple-portfolio .ap-product-model-label>span:last-child {font-size:16px;color:var(--ap-muted)}
+#apple-portfolio .ap-workspace-scene {height:184px;position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;background:radial-gradient(ellipse at 50% 45%,var(--module-soft),transparent 70%)}
+#apple-portfolio .ap-workspace-orbit {position:absolute;width:160px;height:125px;border:1px solid color-mix(in srgb,var(--module-accent) 16%,transparent);border-radius:50%;transform:rotate(-24deg);pointer-events:none}
+#apple-portfolio .ap-workspace-orbit:after {content:'';position:absolute;inset:-13px 15px;border:1px solid color-mix(in srgb,var(--module-accent) 10%,transparent);border-radius:50%;transform:rotate(65deg)}
+#apple-portfolio .ap-workspace-symbol {position:relative;display:grid;place-items:center;width:78px;height:78px;border-radius:23px;color:var(--module-accent);background:linear-gradient(145deg,var(--ap-card),var(--module-soft));border:1px solid light-dark(#fff,#ffffff24);box-shadow:inset 0 1px 0 light-dark(#fff,#ffffff26),0 12px 30px color-mix(in srgb,var(--module-glow) 45%,transparent);transition:background .4s,color .4s}
+#apple-portfolio .ap-workspace-symbol svg {width:34px;height:34px;animation:ap-module-in .45s cubic-bezier(.2,.7,.2,1) both}
+#apple-portfolio .ap-workspace-step {font:9px ui-monospace,monospace;letter-spacing:1.8px;color:var(--module-accent);z-index:1}
+#apple-portfolio .ap-selected-step {padding:2px 23px 0;text-align:center;min-height:111px}
+#apple-portfolio .ap-selected-step h4 {font-size:20px;font-weight:550;line-height:1.3;letter-spacing:-.55px;margin:0}
+#apple-portfolio .ap-selected-step p {font-size:12px;line-height:1.75;color:var(--ap-muted);margin:10px auto 0;max-width:290px}
+#apple-portfolio .ap-product-journey {position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:18px 14px 22px;gap:5px;min-height:0}
+#apple-portfolio .ap-product-journey:before {content:'';position:absolute;left:14%;right:14%;height:1px;top:38px;background:linear-gradient(90deg,var(--module-accent) var(--journey-fill,0%),var(--ap-line) var(--journey-fill,0%));pointer-events:none}
+#apple-portfolio .ap-journey-step {position:relative;display:flex;flex-direction:column;align-items:center;max-width:none;padding:0 2px;gap:9px;z-index:1}
+#apple-portfolio .ap-step-symbol {margin:0;width:39px;height:39px;border-radius:12px;background:var(--ap-card);border:1px solid var(--ap-line);color:var(--ap-muted);transition:background .25s,color .25s,box-shadow .25s,border-color .25s}
+#apple-portfolio .ap-step-symbol svg {width:16px;height:16px}
+#apple-portfolio .ap-journey-step>span:last-child {font-size:10px;color:var(--ap-muted);white-space:nowrap}
+#apple-portfolio .ap-journey-step[aria-pressed="true"] .ap-step-symbol {background:var(--module-soft);color:var(--module-accent);border-color:color-mix(in srgb,var(--module-accent) 35%,transparent);box-shadow:0 0 0 4px color-mix(in srgb,var(--module-soft) 70%,transparent)}
+#apple-portfolio .ap-journey-step[aria-pressed="true"]>span:last-child {color:var(--ap-ink)}
+#apple-portfolio .ap-model-bottom {font-size:9px;border-color:color-mix(in srgb,var(--ap-line) 60%,transparent);padding:13px 18px;gap:8px}
+#apple-portfolio .ap-product .ap-fine-print {max-width:none;margin-top:19px;text-align:left;font-size:10px}
+@keyframes ap-module-in {from{opacity:.3;transform:translateY(6px) scale(.9)}to{opacity:1;transform:none}}
+
+/* Contact: a personal introduction and a focused, accessible form. */
+#apple-portfolio .ap-contact {padding:95px 0 100px;text-align:left;max-width:1100px}
+#apple-portfolio .ap-contact-heading .ap-section-kicker {font-size:11px;letter-spacing:1.6px;margin-bottom:22px}
+#apple-portfolio .ap-contact-heading h2 {font-size:clamp(44px,6vw,74px);letter-spacing:-.06em;line-height:1.04}
+#apple-portfolio .ap-contact-heading>p:last-child {color:var(--ap-muted);font-size:16px;line-height:1.8;margin-top:24px}
+#apple-portfolio .ap-contact-layout {display:grid;grid-template-columns:.7fr 1.3fr;gap:65px;margin-top:48px;align-items:start}
+#apple-portfolio .ap-contact-aside {padding:20px 0 0}
+#apple-portfolio .ap-contact-aside .ap-contact-mark {font-size:38px;margin-bottom:26px}
+#apple-portfolio .ap-contact-aside h3 {font-size:28px;font-weight:550;letter-spacing:-1px;line-height:1.2}
+#apple-portfolio .ap-contact-aside>p {font-size:14px;line-height:1.85;color:var(--ap-muted);max-width:265px;margin-top:18px}
+#apple-portfolio .ap-contact-direct {display:flex;flex-direction:column;gap:11px;margin-top:39px}
+#apple-portfolio .ap-contact-direct>span {font:9px ui-monospace,monospace;letter-spacing:1.4px;color:var(--ap-muted)}
+#apple-portfolio .ap-contact-direct>a {font-size:14px;letter-spacing:-.2px;display:flex;gap:10px;align-items:center;width:fit-content}
+#apple-portfolio .ap-contact-direct>a:hover {color:var(--ap-blue)}
+#apple-portfolio .ap-contact-aside .ap-contact-socials {justify-content:flex-start;font-size:11px;gap:18px;margin-top:26px}
+#apple-portfolio .ap-contact-form {width:100%;max-width:none;margin:0;padding:34px;border:1px solid color-mix(in srgb,var(--ap-line) 65%,transparent);border-radius:26px;background:var(--ap-section);box-shadow:0 20px 55px #00000005}
+#apple-portfolio .ap-form-heading h3 {font-size:25px;letter-spacing:-.7px;font-weight:550}
+#apple-portfolio .ap-form-heading p {font-size:13px;line-height:1.7;color:var(--ap-muted);margin-top:7px}
+#apple-portfolio .ap-topic-field {padding:0;margin:28px 0;border:0;min-width:0}
+#apple-portfolio .ap-topic-field legend {font-size:12px;margin-bottom:12px}
+#apple-portfolio .ap-topic-options {display:flex;flex-wrap:wrap;gap:8px}
+#apple-portfolio .ap-contact-form .ap-topic-options label {position:relative;margin:0;display:block}
+#apple-portfolio .ap-topic-options input {position:absolute;width:1px;height:1px;opacity:0;margin:0;padding:0;border:0}
+#apple-portfolio .ap-topic-options label>span {display:block;padding:9px 14px;border:1px solid var(--ap-line);border-radius:25px;font-size:11px;color:var(--ap-muted);background:var(--ap-card);transition:color .2s,background .2s,border-color .2s}
+#apple-portfolio .ap-topic-options input:checked+span {background:var(--ap-ink);color:var(--ap-page);border-color:var(--ap-ink)}
+#apple-portfolio .ap-topic-options input:focus-visible+span {outline:3px solid #2997ff;outline-offset:3px}
+#apple-portfolio .ap-contact-form .form-row {gap:18px}
+#apple-portfolio .ap-contact-form .ap-form-field {min-width:0;margin-bottom:22px}
+#apple-portfolio .ap-form-field label {font-size:12px;margin:0 0 9px}
+#apple-portfolio .ap-form-field label>span {color:var(--ap-muted);padding-left:2px}
+#apple-portfolio .ap-contact-form .ap-form-field input,#apple-portfolio .ap-contact-form .ap-form-field textarea {margin:0;padding:13px 14px;border:1px solid var(--ap-line);font-size:14px;border-radius:11px;transition:background .2s,border-color .2s}
+#apple-portfolio .ap-contact-form input::placeholder,#apple-portfolio .ap-contact-form textarea::placeholder {color:var(--ap-muted);opacity:.75}
+#apple-portfolio .ap-contact-form input[aria-invalid="true"],#apple-portfolio .ap-contact-form textarea[aria-invalid="true"] {border-color:light-dark(#ba3f42,#ed999b);background:light-dark(#fff8f7,#35272b)}
+#apple-portfolio .ap-contact-form textarea {line-height:1.7;min-height:135px}
+#apple-portfolio .ap-field-error {display:block;font-size:11px;line-height:1.6;color:light-dark(#a62c30,#f1a4a6);margin-top:7px}
+#apple-portfolio .ap-field-error:empty {display:none}
+#apple-portfolio .ap-message-meta {display:flex;justify-content:space-between;gap:12px;font-size:10px;line-height:1.6;color:var(--ap-muted);margin-top:9px}
+#apple-portfolio #message-count {white-space:nowrap;font-variant-numeric:tabular-nums}
+#apple-portfolio .ap-form-footer {display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--ap-line);padding-top:22px;margin-top:2px}
+#apple-portfolio .ap-form-footer>p {font-size:10px;line-height:1.7;color:var(--ap-muted)}
+#apple-portfolio .ap-contact-form .ap-pill {font-size:12px;min-height:43px;padding:12px 19px;gap:17px;box-shadow:0 5px 15px #0071e31a}
+#apple-portfolio .ap-submit-spinner {display:none;width:14px;height:14px;border:1.5px solid #ffffff55;border-top-color:white;border-radius:50%}
+#apple-portfolio [aria-busy="true"] .ap-submit-spinner {display:block;animation:ap-form-spin .7s linear infinite}
+#apple-portfolio [aria-busy="true"] .ap-submit-arrow {display:none}
+#apple-portfolio #form-status {font-size:12px;line-height:1.7;min-height:0;margin:0;border-radius:10px}
+#apple-portfolio #form-status:not(:empty) {padding:13px 14px;margin-top:20px;background:var(--ap-card);border:1px solid var(--ap-line)}
+#apple-portfolio #form-status[data-state="success"] {background:light-dark(#ebf4ed,#243b2b);color:light-dark(#315c3c,#b6dfc2);border-color:light-dark(#c3d9c8,#3c6249)}
+#apple-portfolio #form-status[data-state="error"],#apple-portfolio #form-status[data-state="validation"] {color:light-dark(#a62c30,#f1a4a6);border-color:light-dark(#e5c5c5,#70474c)}
+#apple-portfolio .ap-form-fallback {display:inline-block;font-size:12px;color:var(--ap-blue);margin-top:12px}
+@keyframes ap-form-spin {to{transform:rotate(360deg)}}
+@media(max-width:1050px){#apple-portfolio .ap-product-heading{gap:40px}#apple-portfolio .ap-product-model{padding:26px;gap:25px}#apple-portfolio .ap-module-title{font-size:31px}#apple-portfolio .ap-contact-layout{gap:40px;grid-template-columns:.7fr 1.3fr}#apple-portfolio .ap-contact-form{padding:28px}}
+@media(max-width:800px){#apple-portfolio .ap-product-heading{grid-template-columns:1fr;gap:27px}#apple-portfolio .ap-product-intro{max-width:570px}#apple-portfolio .ap-product-intro>p{max-width:none}#apple-portfolio .ap-product-model{grid-template-columns:1fr;gap:28px;padding:30px}#apple-portfolio .ap-product-story{display:block}#apple-portfolio .ap-module-title{max-width:500px;font-size:34px;margin-top:17px}#apple-portfolio .ap-module-summary,#apple-portfolio .ap-module-features{max-width:100%}#apple-portfolio .ap-product-contribution{margin-top:0}#apple-portfolio .ap-workspace{max-width:100%}#apple-portfolio .ap-workspace-scene{height:170px}#apple-portfolio .ap-selected-step{min-height:95px}#apple-portfolio .ap-selected-step p{max-width:360px}#apple-portfolio .ap-contact-layout{grid-template-columns:1fr;gap:30px}#apple-portfolio .ap-contact-aside{display:grid;grid-template-columns:1fr 1fr;gap:10px 25px;padding:0}#apple-portfolio .ap-contact-aside .ap-contact-mark,#apple-portfolio .ap-contact-aside h3{display:none}#apple-portfolio .ap-contact-aside>p{grid-column:1;margin:0;max-width:330px}#apple-portfolio .ap-contact-direct{grid-column:2;grid-row:1;margin:0;justify-content:center}#apple-portfolio .ap-contact-aside .ap-contact-socials{grid-column:2;margin:0}#apple-portfolio .ap-contact-form{padding:32px}}
+@media(max-width:520px){#apple-portfolio .ap-product{padding:70px 0}#apple-portfolio .ap-product-heading h2{font-size:47px;letter-spacing:-2.6px}#apple-portfolio .ap-product-wordmark{font-size:25px}#apple-portfolio .ap-product-intro>p{font-size:14px}#apple-portfolio .ap-product-visual{margin-top:30px}#apple-portfolio .ap-product-tabs{width:100%;gap:2px;padding:4px;border-radius:15px}#apple-portfolio .ap-product-tabs button{flex:1;justify-content:center;padding:10px 6px;font-size:10px;gap:5px;min-height:44px}#apple-portfolio .ap-product-tabs svg{display:none}#apple-portfolio .ap-product-model{padding:19px;border-radius:23px;gap:23px}#apple-portfolio .ap-module-number{font-size:9px}#apple-portfolio .ap-module-title{font-size:29px;letter-spacing:-1px}#apple-portfolio .ap-module-summary{font-size:13px;line-height:1.8}#apple-portfolio .ap-module-features{gap:9px 14px;margin:20px 0 24px}#apple-portfolio .ap-module-features li{font-size:10px}#apple-portfolio .ap-product-contribution>p{font-size:11px}#apple-portfolio .ap-product-model-label{padding:12px 14px}#apple-portfolio .ap-product-model-label>span:nth-child(2){font-size:7px;letter-spacing:1px}#apple-portfolio .ap-workspace-scene{height:162px}#apple-portfolio .ap-selected-step{padding-inline:15px;min-height:114px}#apple-portfolio .ap-selected-step h4{font-size:18px}#apple-portfolio .ap-selected-step p{font-size:11px}#apple-portfolio .ap-product-journey{padding:18px 8px 20px;gap:2px}#apple-portfolio .ap-step-symbol{width:34px;height:34px;border-radius:10px}#apple-portfolio .ap-product-journey:before{top:35px}#apple-portfolio .ap-journey-step>span:last-child{font-size:8px}#apple-portfolio .ap-model-bottom{font-size:8px;padding-inline:12px}#apple-portfolio .ap-product .ap-fine-print{font-size:9px;line-height:1.7}#apple-portfolio .ap-contact{padding:70px 0}#apple-portfolio .ap-contact-heading h2{font-size:48px;letter-spacing:-2.4px}#apple-portfolio .ap-contact-heading>p:last-child{font-size:14px}#apple-portfolio .ap-contact-heading>p:last-child br{display:none}#apple-portfolio .ap-contact-layout{margin-top:30px;gap:28px}#apple-portfolio .ap-contact-aside{display:flex;flex-direction:column;gap:0}#apple-portfolio .ap-contact-aside>p{display:none}#apple-portfolio .ap-contact-direct{gap:9px}#apple-portfolio .ap-contact-aside .ap-contact-socials{margin-top:18px;font-size:11px}#apple-portfolio .ap-contact-form{padding:23px 20px;border-radius:23px}#apple-portfolio .ap-form-heading h3{font-size:24px}#apple-portfolio .ap-topic-field{margin:24px 0}#apple-portfolio .ap-topic-options{gap:6px}#apple-portfolio .ap-topic-options label>span{font-size:10px;padding:10px 13px}#apple-portfolio .ap-contact-form .form-row{grid-template-columns:1fr;gap:0}#apple-portfolio .ap-contact-form .ap-form-field input,#apple-portfolio .ap-contact-form .ap-form-field textarea{font-size:16px}#apple-portfolio .ap-message-meta{font-size:9px;gap:7px}#apple-portfolio .ap-form-footer{gap:10px}#apple-portfolio .ap-form-footer>p{font-size:9px}#apple-portfolio .ap-contact-form .ap-pill{padding:12px 15px;font-size:11px;gap:10px}}
+@media(prefers-reduced-motion:reduce){#apple-portfolio .ap-workspace-symbol svg,#apple-portfolio [aria-busy="true"] .ap-submit-spinner{animation:none}}
+@media(max-width:520px){#apple-portfolio .ap-journey-step>span:last-child{font-size:10px}#apple-portfolio .ap-product-model-label>span:nth-child(2){font-size:9px;letter-spacing:.8px}}
+@media(pointer:coarse){#apple-portfolio .ap-topic-options label>span{display:flex;align-items:center;min-height:44px}}
+
+/* Salesforce chapters: editorial previews, scoped filters, and deeper stories. */
+#apple-portfolio .ap-work .ap-section-heading {display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:end}
+#apple-portfolio .ap-work .ap-work-eyebrow {font:10px/1.6 ui-monospace,monospace;letter-spacing:1.4px;color:var(--ap-muted);margin:0 0 18px}
+#apple-portfolio .ap-work .ap-section-heading h2 {font-size:clamp(37px,4.8vw,56px);line-height:1.06;letter-spacing:-.055em}
+#apple-portfolio .ap-work-intro {padding-bottom:2px}
+#apple-portfolio .ap-work-brand {display:flex;align-items:center;gap:9px;font-size:14px;font-weight:550;letter-spacing:-.3px}
+#apple-portfolio .ap-work-brand svg {width:26px;height:26px;color:var(--ap-blue)}
+#apple-portfolio .ap-work .ap-work-intro p {font-size:13px;line-height:1.8;max-width:300px;color:var(--ap-muted);margin-top:13px}
+#apple-portfolio .ap-work-controls {display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:28px}
+#apple-portfolio .ap-work-filters {display:flex;align-items:center;gap:7px;overflow-x:auto;scrollbar-width:none;min-width:0;padding:4px}
+#apple-portfolio .ap-work-filters button {font-size:11px;padding:10px 16px;min-height:38px;border-radius:25px;color:var(--ap-muted);border:1px solid var(--ap-line);background:var(--ap-card);white-space:nowrap;transition:background .2s,color .2s,border-color .2s}
+#apple-portfolio .ap-work-filters button[aria-pressed="true"] {background:var(--ap-ink);color:var(--ap-page);border-color:var(--ap-ink)}
+#apple-portfolio .ap-work-count {font:10px ui-monospace,monospace;color:var(--ap-muted);white-space:nowrap;letter-spacing:.6px}
+#apple-portfolio.ap-effects .ap-work-pin {padding-top:35px}
+#apple-portfolio.ap-effects .ap-gallery-wrap {margin-top:20px}
+#apple-portfolio .ap-gallery {padding-top:9px}
+#apple-portfolio .ap-feature {padding:26px;min-height:360px;border:1px solid color-mix(in srgb,var(--ap-line) 35%,transparent)}
+#apple-portfolio.ap-effects .ap-feature {height:clamp(285px,calc(var(--ap-pin-height) * .46),370px);min-height:0}
+#apple-portfolio .ap-feature-kicker {font:9px/1.5 ui-monospace,monospace;letter-spacing:.65px;max-width:190px;margin:0 28px 18px 0;min-height:14px}
+#apple-portfolio .ap-feature-count {position:absolute;right:24px;top:26px;font:10px ui-monospace,monospace;color:var(--ap-muted);opacity:.7}
+#apple-portfolio .ap-feature-dark .ap-feature-count {color:#a3a3ad}
+#apple-portfolio .ap-feature strong {font-size:27px;line-height:1.14;letter-spacing:-1px;max-width:245px}
+#apple-portfolio .ap-feature-copy {font-size:12px;line-height:1.75;margin-top:15px;max-width:245px;color:var(--ap-muted)}
+#apple-portfolio .ap-feature-tags {display:flex;flex-wrap:wrap;gap:6px;margin-top:20px}
+#apple-portfolio .ap-feature-tags>span {font-size:9px;line-height:1.3;border:1px solid var(--ap-line);border-radius:5px;padding:5px 7px;color:var(--ap-muted);white-space:nowrap}
+#apple-portfolio .ap-feature-dark .ap-feature-tags>span {color:#c2c2ce;border-color:#ffffff25}
+#apple-portfolio .ap-feature-read {margin-top:auto;border-top:1px solid var(--ap-line);padding-top:17px;display:flex;justify-content:space-between;align-items:center;width:100%;font-size:11px;color:var(--ap-blue)}
+#apple-portfolio .ap-feature-dark .ap-feature-read {border-color:#ffffff25;color:#9bbcff}
+#apple-portfolio .ap-feature-read>span {font-size:18px;line-height:1}
+#apple-portfolio .ap-work .ap-gallery-footer {margin-top:0;font-size:10px;gap:18px}
+#apple-portfolio .ap-modal-sheet {max-width:780px;padding:50px 44px 25px;border:1px solid var(--ap-line);border-radius:28px}
+#apple-portfolio .ap-modal-close {position:sticky;top:0;left:100%;margin:-34px -28px 4px auto;z-index:3}
+#apple-portfolio .ap-case-modal-top {display:flex;align-items:center;gap:15px;justify-content:space-between;color:var(--ap-muted);font:10px/1.5 ui-monospace,monospace;letter-spacing:.7px;margin:8px 0 20px}
+#apple-portfolio .ap-case-modal-top>span:last-child {white-space:nowrap}
+#apple-portfolio .ap-modal-content h2 {font-size:clamp(31px,3.8vw,45px);max-width:630px;letter-spacing:-1.6px;margin-bottom:20px;line-height:1.1}
+#apple-portfolio .ap-case-modal-tags {display:flex;flex-wrap:wrap;gap:7px;margin-bottom:26px}
+#apple-portfolio .ap-case-modal-tags>span {font-size:10px;color:var(--ap-muted);border:1px solid var(--ap-line);border-radius:6px;padding:6px 9px}
+#apple-portfolio .ap-modal-content .ap-modal-outcome {padding:24px;border:1px solid color-mix(in srgb,var(--ap-line) 60%,transparent);border-radius:16px;margin:0 0 27px;background:var(--ap-section)}
+#apple-portfolio .ap-outcome-label {font:9px ui-monospace,monospace;letter-spacing:1.3px;color:var(--ap-blue);display:block;margin-bottom:12px}
+#apple-portfolio .ap-modal-content .ap-modal-outcome p {font-size:19px;line-height:1.5;letter-spacing:-.35px;color:var(--ap-ink)}
+#apple-portfolio .ap-case-modal-detail {display:grid;grid-template-columns:.85fr 1.15fr;gap:30px}
+#apple-portfolio .ap-case-modal-detail h3 {font-size:14px;margin:0 0 12px;font-weight:550}
+#apple-portfolio .ap-case-modal-detail p,#apple-portfolio .ap-case-modal-detail li {font-size:13px;line-height:1.8}
+#apple-portfolio .ap-case-modal-detail ol {gap:12px;padding-left:20px}
+#apple-portfolio .ap-case-modal-detail li::marker {color:var(--ap-blue);font-size:11px;font-weight:500}
+#apple-portfolio .ap-modal-content .ap-modal-foot {font-size:10px;line-height:1.7;margin-top:26px;padding-top:19px}
+#apple-portfolio .ap-case-modal-nav {display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:1px solid var(--ap-line);padding-top:18px;margin-top:18px}
+#apple-portfolio .ap-case-modal-nav>span {font:11px ui-monospace,monospace;color:var(--ap-muted)}
+#apple-portfolio .ap-case-modal-nav>div {display:flex;gap:9px}
+#apple-portfolio .ap-case-modal-nav button {display:flex;align-items:center;gap:10px;font-size:12px;border:1px solid var(--ap-line);border-radius:22px;padding:9px 13px;color:var(--ap-ink);background:var(--ap-section)}
+#apple-portfolio .ap-case-modal-nav button:disabled {opacity:.35}
+@media(max-width:950px){#apple-portfolio .ap-work .ap-section-heading{gap:30px}#apple-portfolio .ap-work .ap-section-heading h2{font-size:43px}#apple-portfolio .ap-work-controls{margin-top:23px}#apple-portfolio .ap-work-count{display:none}}
+@media(max-width:650px){#apple-portfolio .ap-work .ap-section-heading{display:block}#apple-portfolio .ap-work .ap-work-eyebrow{font-size:8px;letter-spacing:1px;margin-bottom:13px}#apple-portfolio .ap-work .ap-section-heading h2{font-size:37px;letter-spacing:-1.8px;max-width:360px}#apple-portfolio .ap-work-intro{display:none}#apple-portfolio .ap-work-controls{margin-top:17px}#apple-portfolio .ap-work-filters{gap:6px;padding:4px 1px}#apple-portfolio .ap-work-filters button{font-size:10px;padding:9px 12px;min-height:40px}#apple-portfolio.ap-effects .ap-work-pin{padding-top:23px}#apple-portfolio.ap-effects .ap-gallery-wrap{margin-top:15px}#apple-portfolio .ap-gallery{padding-bottom:20px}#apple-portfolio .ap-feature{padding:23px;min-width:270px}#apple-portfolio .ap-feature-kicker{margin-bottom:14px;font-size:8px}#apple-portfolio .ap-feature-count{right:23px;top:23px}#apple-portfolio .ap-feature strong{font-size:25px}#apple-portfolio .ap-feature-copy{font-size:11px;margin-top:13px}#apple-portfolio .ap-feature-tags{margin-top:17px}#apple-portfolio .ap-feature-tags>span{font-size:8px}#apple-portfolio .ap-feature-read{font-size:10px;padding-top:13px}#apple-portfolio .ap-work .ap-gallery-footer>span{font-size:9px;max-width:190px}#apple-portfolio .ap-modal-sheet{padding:50px 23px 24px;max-height:92dvh;border-radius:22px}#apple-portfolio .ap-modal-close{margin:-34px -7px 4px auto}#apple-portfolio .ap-case-modal-top{font-size:8px;gap:12px}#apple-portfolio .ap-modal-content h2{font-size:32px;letter-spacing:-1.25px}#apple-portfolio .ap-modal-content .ap-modal-outcome{padding:19px;margin-bottom:24px}#apple-portfolio .ap-modal-content .ap-modal-outcome p{font-size:17px}#apple-portfolio .ap-case-modal-detail{grid-template-columns:1fr;gap:24px}#apple-portfolio .ap-case-modal-detail p,#apple-portfolio .ap-case-modal-detail li{font-size:13px}#apple-portfolio .ap-case-modal-nav button{padding:10px 12px;gap:8px;font-size:11px}}
+@media(max-width:650px) and (max-height:740px){#apple-portfolio .ap-feature-copy{display:none}#apple-portfolio .ap-feature-tags{margin-top:18px}#apple-portfolio.ap-effects .ap-work-pin{padding-top:16px}#apple-portfolio .ap-work .ap-section-heading h2{font-size:32px}#apple-portfolio.ap-effects .ap-work-pin .ap-feature{height:270px}#apple-portfolio .ap-work .ap-work-eyebrow{margin-bottom:10px}#apple-portfolio .ap-work-controls{margin-top:12px}}
+@media(pointer:coarse){#apple-portfolio .ap-work-filters button,#apple-portfolio .ap-case-modal-nav button{min-height:44px}}
+#apple-portfolio .ap-case-modal-top{padding-right:43px}
+
+/* Career history, grouped by company so overlapping role months count once. */
+#apple-portfolio .ap-experience {padding:20px 0 105px;max-width:1100px}
+#apple-portfolio .ap-experience-heading {display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:70px;margin-bottom:42px}
+#apple-portfolio .ap-experience-heading .ap-section-kicker {font:10px/1.6 ui-monospace,monospace;letter-spacing:1.4px;margin-bottom:20px}
+#apple-portfolio .ap-experience h2 {font-size:clamp(43px,5.3vw,70px);font-weight:600;line-height:1.05;letter-spacing:-.06em}
+#apple-portfolio .ap-experience h2>span {color:var(--ap-muted)}
+#apple-portfolio .ap-experience-intro {padding:0 0 3px}
+#apple-portfolio .ap-experience-intro>p {font-size:17px;line-height:1.75;letter-spacing:-.25px;color:var(--ap-muted)}
+#apple-portfolio .ap-experience-intro .ap-text-link {font-size:13px;margin-top:14px}
+#apple-portfolio .ap-experience-list {display:grid;gap:20px}
+#apple-portfolio .ap-career-company {padding:31px 35px 34px;border:1px solid color-mix(in srgb,var(--ap-line) 75%,transparent);border-radius:26px;background:var(--ap-section);position:relative;overflow:hidden}
+#apple-portfolio .ap-career-current {background:linear-gradient(130deg,var(--ap-section),light-dark(#edf2fc,#1f2634));border-top-color:light-dark(#fff,#ffffff2d);box-shadow:0 18px 50px #00000005}
+#apple-portfolio .ap-career-header {display:flex;align-items:center;gap:21px}
+#apple-portfolio .ap-company-mark {width:59px;height:59px;display:grid;place-items:center;border:1px solid color-mix(in srgb,var(--ap-line) 75%,transparent);background:var(--ap-card);border-radius:17px;flex-shrink:0;font-size:23px;letter-spacing:-1.6px;font-weight:600}
+#apple-portfolio .ap-company-ibm {color:light-dark(#3867a9,#a3c2f2);font-size:20px;letter-spacing:-.7px}
+#apple-portfolio .ap-company-red-hat {color:light-dark(#b44443,#e9a09b)}
+#apple-portfolio .ap-company-info {min-width:0}
+#apple-portfolio .ap-company-name {display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+#apple-portfolio .ap-company-name h3 {font-size:25px;line-height:1.2;font-weight:600;letter-spacing:-.9px}
+#apple-portfolio .ap-current-role {display:inline-flex;align-items:center;gap:6px;font-size:9px;color:light-dark(#3b654a,#b0d9bd);background:light-dark(#e1ede4,#2c3e33);padding:5px 9px;border-radius:20px}
+#apple-portfolio .ap-current-role>span {width:4px;height:4px;border-radius:50%;background:currentColor}
+#apple-portfolio .ap-company-period {display:flex;align-items:center;gap:7px;font-size:11px;color:var(--ap-muted);margin-top:8px}
+#apple-portfolio .ap-company-tenure {margin-left:auto;display:flex;flex-direction:column;gap:6px;text-align:right;padding-left:15px}
+#apple-portfolio .ap-company-tenure strong {font-size:21px;letter-spacing:-.6px;font-weight:500;line-height:1.3}
+#apple-portfolio .ap-company-tenure>span {font-size:10px;color:var(--ap-muted)}
+#apple-portfolio .ap-career-location {display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:19px 0 0 80px;font-size:11px;line-height:1.7;color:var(--ap-muted)}
+#apple-portfolio .ap-career-location svg {width:13px;height:13px;flex-shrink:0}
+#apple-portfolio .ap-work-mode {border:1px solid var(--ap-line);border-radius:20px;padding:2px 9px;font-size:9px;margin-left:7px;color:var(--ap-muted);line-height:1.6;white-space:nowrap}
+#apple-portfolio .ap-career-roles {list-style:none;margin:23px 0 0 80px;padding:24px 0 0;border-top:1px solid var(--ap-line);display:grid;gap:27px}
+#apple-portfolio .ap-career-roles>li {position:relative;padding-left:22px}
+#apple-portfolio .ap-career-roles>li:before {content:'';position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--ap-muted);opacity:.55}
+#apple-portfolio .ap-career-current .ap-career-roles>li:before {background:var(--ap-blue);opacity:.8}
+#apple-portfolio .ap-career-roles>li:not(:last-child):after {content:'';position:absolute;left:2.5px;top:22px;bottom:-13px;width:1px;background:var(--ap-line)}
+#apple-portfolio .ap-role-heading {display:flex;align-items:center;justify-content:space-between;gap:20px}
+#apple-portfolio .ap-role-heading h4 {font-size:18px;font-weight:550;line-height:1.4;letter-spacing:-.45px;margin:0}
+#apple-portfolio .ap-role-heading>span {color:var(--ap-muted);font-size:10px;white-space:nowrap}
+#apple-portfolio .ap-role-period {display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-top:8px;color:var(--ap-muted);font-size:11px;line-height:1.7}
+#apple-portfolio .ap-tenure-separator {margin:0 3px;opacity:.5}
+#apple-portfolio .ap-career-ready {opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+#apple-portfolio .ap-career-visible {opacity:1;transform:none}
+@media(max-width:850px){#apple-portfolio .ap-experience-heading{gap:35px}#apple-portfolio .ap-experience-intro>p{font-size:15px}#apple-portfolio .ap-career-company{padding:27px}#apple-portfolio .ap-career-location,#apple-portfolio .ap-career-roles{margin-left:0}#apple-portfolio .ap-company-tenure strong{font-size:19px}}
+@media(max-width:650px){#apple-portfolio .ap-experience{padding:0 0 70px}#apple-portfolio .ap-experience-heading{grid-template-columns:1fr;gap:24px;margin-bottom:28px}#apple-portfolio .ap-experience-heading .ap-section-kicker{font-size:9px;letter-spacing:1.1px;margin-bottom:18px}#apple-portfolio .ap-experience h2{font-size:48px;letter-spacing:-2.6px}#apple-portfolio .ap-experience-intro>p{font-size:14px}#apple-portfolio .ap-experience-intro>p br{display:none}#apple-portfolio .ap-experience-intro .ap-text-link{font-size:12px;margin-top:10px}#apple-portfolio .ap-career-company{padding:23px 21px;border-radius:23px}#apple-portfolio .ap-career-header{flex-wrap:wrap;gap:14px}#apple-portfolio .ap-company-mark{width:48px;height:48px;border-radius:14px;font-size:21px}#apple-portfolio .ap-company-ibm{font-size:17px}#apple-portfolio .ap-company-name{gap:9px}#apple-portfolio .ap-company-name h3{font-size:22px}#apple-portfolio .ap-current-role{font-size:8px;padding:4px 7px}#apple-portfolio .ap-company-period{font-size:10px;margin-top:6px}#apple-portfolio .ap-company-tenure{width:100%;padding:15px 0 0;margin:3px 0 0;border-top:1px solid var(--ap-line);flex-direction:row;align-items:center;justify-content:space-between;text-align:left}#apple-portfolio .ap-company-tenure strong{font-size:17px}#apple-portfolio .ap-company-tenure>span{font-size:9px}#apple-portfolio .ap-career-location{font-size:10px;gap:6px;margin-top:17px;line-height:1.7}#apple-portfolio .ap-career-location>span:first-of-type{max-width:calc(100% - 22px)}#apple-portfolio .ap-work-mode{margin-left:19px;font-size:9px}#apple-portfolio .ap-career-roles{margin-top:19px;padding-top:20px;gap:25px}#apple-portfolio .ap-role-heading{display:block}#apple-portfolio .ap-role-heading h4{font-size:16px;letter-spacing:-.3px}#apple-portfolio .ap-role-heading>span{font-size:10px;display:block;margin-top:5px}#apple-portfolio .ap-role-period{font-size:10px;gap:6px;margin-top:8px}#apple-portfolio .ap-role-period .ap-tenure-separator{margin:0 1px}#apple-portfolio .ap-global nav [data-go="about"]{display:none}}
+@media(prefers-reduced-motion:reduce){#apple-portfolio .ap-career-ready{opacity:1;transform:none;transition:none}}
+
+/* A continuous, reversible career timeline, on the page's shared scroll clock. */
+#apple-portfolio .ap-experience {display:grid;grid-template-columns:minmax(260px,.72fr) minmax(0,1.28fr);gap:60px;align-items:start;padding-top:40px;padding-bottom:120px}
+#apple-portfolio .ap-experience-heading {display:block;position:sticky;top:115px;margin:0;align-self:start}
+#apple-portfolio .ap-experience h2 {font-size:clamp(42px,4.1vw,58px);letter-spacing:-.065em;line-height:1.04}
+#apple-portfolio .ap-experience-intro {margin-top:25px;padding:0}
+#apple-portfolio .ap-experience-intro>p {font-size:14px;line-height:1.85}
+#apple-portfolio .ap-experience-intro>p br {display:none}
+#apple-portfolio .ap-experience-intro .ap-text-link {font-size:12px;margin-top:15px}
+#apple-portfolio .ap-experience-list {position:relative;padding-left:31px;gap:55px;min-width:0}
+#apple-portfolio .ap-experience-list:before,#apple-portfolio .ap-experience-list:after {content:'';position:absolute;left:0;top:43px;bottom:35px;width:2px;pointer-events:none;border-radius:2px}
+#apple-portfolio .ap-experience-list:before {background:var(--ap-line)}
+#apple-portfolio .ap-experience-list:after {background:linear-gradient(var(--ap-blue),light-dark(#8e7fc5,#c0b0e9));transform:scaleY(var(--career-progress,1));transform-origin:top;will-change:transform}
+#apple-portfolio .ap-career-company {overflow:visible;padding:28px;transition:border-color .3s,box-shadow .3s;transform-origin:50% 75%}
+#apple-portfolio .ap-career-company:before {content:'';position:absolute;left:-36px;top:39px;width:9px;height:9px;border:2px solid var(--ap-line);background:var(--ap-page);border-radius:50%;z-index:1;transition:background .3s,border-color .3s,box-shadow .3s}
+#apple-portfolio .ap-career-motion .ap-career-company {opacity:calc(.72 + var(--career-entry,0) * .28);transform:perspective(1200px) translateY(calc((1 - var(--career-entry,0)) * 45px)) rotateX(calc((1 - var(--career-entry,0)) * 5deg)) scale(calc(.97 + var(--career-entry,0) * .03));will-change:transform,opacity}
+#apple-portfolio .ap-career-motion .ap-career-active {border-color:color-mix(in srgb,var(--ap-blue) 34%,var(--ap-line));box-shadow:0 15px 45px color-mix(in srgb,var(--ap-blue) 5%,transparent)}
+#apple-portfolio .ap-career-motion .ap-career-active:before {background:var(--ap-blue);border-color:var(--ap-blue);box-shadow:0 0 0 6px color-mix(in srgb,var(--ap-blue) 10%,transparent)}
+#apple-portfolio .ap-career-header {gap:15px}
+#apple-portfolio .ap-company-mark {width:48px;height:48px;border-radius:14px;font-size:21px}
+#apple-portfolio .ap-company-ibm {font-size:17px}
+#apple-portfolio .ap-company-name h3 {font-size:23px}
+#apple-portfolio .ap-company-tenure {padding-left:8px}
+#apple-portfolio .ap-company-tenure strong {font-size:17px}
+#apple-portfolio .ap-company-tenure>span {font-size:9px}
+#apple-portfolio .ap-career-location {margin-left:0;font-size:10px;gap:7px;margin-top:20px}
+#apple-portfolio .ap-career-roles {margin-left:0;margin-top:22px;gap:30px}
+#apple-portfolio .ap-role-heading h4 {font-size:17px}
+#apple-portfolio .ap-role-period {font-size:10px}
+#apple-portfolio .ap-career-motion .ap-career-roles>li {transform:translateX(calc((1 - var(--role-reveal,0)) * 12px));opacity:calc(.8 + var(--role-reveal,0) * .2);will-change:transform}
+#apple-portfolio .ap-career-motion .ap-career-roles>li:before {background:var(--ap-blue);opacity:calc(.25 + var(--role-reveal,0) * .75);transform:scale(calc(.8 + var(--role-reveal,0) * .2));box-shadow:0 0 0 calc(var(--role-reveal,0) * 4px) color-mix(in srgb,var(--ap-blue) 8%,transparent)}
+#apple-portfolio .ap-career-motion .ap-career-roles>li:not(:last-child):after {background:linear-gradient(to bottom,var(--ap-blue) calc(var(--role-reveal,0) * 100%),var(--ap-line) calc(var(--role-reveal,0) * 100%))}
+#apple-portfolio .ap-career-chapter {border-top:1px solid var(--ap-line);padding-top:22px;margin-top:30px;max-width:300px}
+#apple-portfolio .ap-career-chapter-label {display:block;font:9px/1.5 ui-monospace,monospace;letter-spacing:1.4px;color:var(--ap-muted)}
+#apple-portfolio .ap-career-chapter>strong {display:block;font-size:28px;letter-spacing:-1px;font-weight:550;margin-top:10px;line-height:1.3}
+#apple-portfolio .ap-career-chapter>div {display:flex;align-items:center;gap:20px;justify-content:space-between;font-size:10px;color:var(--ap-muted);margin-top:10px;line-height:1.6}
+#apple-portfolio .ap-career-chapter-count {font-family:ui-monospace,monospace;color:var(--ap-blue)}
+@media(max-width:1000px){#apple-portfolio .ap-experience{grid-template-columns:1fr;gap:34px;padding-top:25px;padding-bottom:85px}#apple-portfolio .ap-experience-heading{position:relative;top:auto;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end}#apple-portfolio .ap-experience h2{font-size:51px}#apple-portfolio .ap-experience-intro{margin:0}#apple-portfolio .ap-career-chapter{display:none}#apple-portfolio .ap-experience-list{gap:35px}#apple-portfolio .ap-career-header{gap:20px}#apple-portfolio .ap-company-tenure strong{font-size:20px}#apple-portfolio .ap-career-location,#apple-portfolio .ap-career-roles{margin-left:68px}}
+@media(max-width:650px){#apple-portfolio .ap-experience{gap:30px;padding-top:0;padding-bottom:75px}#apple-portfolio .ap-experience-heading{display:block}#apple-portfolio .ap-experience h2{font-size:47px}#apple-portfolio .ap-experience-intro{margin-top:23px}#apple-portfolio .ap-experience-list{padding-left:21px;gap:32px}#apple-portfolio .ap-experience-list:before,#apple-portfolio .ap-experience-list:after{top:36px;bottom:30px}#apple-portfolio .ap-career-company{padding:21px 18px;border-radius:21px}#apple-portfolio .ap-career-company:before{left:-26px;top:32px;width:8px;height:8px}#apple-portfolio .ap-career-header{gap:12px}#apple-portfolio .ap-company-mark{width:43px;height:43px;border-radius:12px}#apple-portfolio .ap-company-name h3{font-size:21px}#apple-portfolio .ap-current-role{font-size:7px;padding:4px 6px}#apple-portfolio .ap-company-period{font-size:9px;gap:5px}#apple-portfolio .ap-company-tenure{padding:15px 0 0}#apple-portfolio .ap-company-tenure strong{font-size:16px}#apple-portfolio .ap-career-location,#apple-portfolio .ap-career-roles{margin-left:0}#apple-portfolio .ap-career-location{font-size:10px;margin-top:17px}#apple-portfolio .ap-role-heading h4{font-size:15px}#apple-portfolio .ap-role-period{font-size:9px}#apple-portfolio .ap-role-heading>span{font-size:9px}#apple-portfolio .ap-career-motion .ap-career-company{transform:translateY(calc((1 - var(--career-entry,0)) * 28px)) scale(calc(.985 + var(--career-entry,0) * .015))}#apple-portfolio .ap-career-motion .ap-career-roles>li{transform:translateX(calc((1 - var(--role-reveal,0)) * 6px))}}
+@media(prefers-reduced-motion:reduce){#apple-portfolio .ap-experience-heading{position:static}#apple-portfolio .ap-career-company,#apple-portfolio .ap-career-company:before{transition:none}#apple-portfolio .ap-experience-list:after{transform:scaleY(1)}}
